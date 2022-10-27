@@ -1,0 +1,138 @@
+/* geral */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, sans-serif;
+    font-size: 1.1em;
+}
+
+/* menu navegação */
+.nav-azul {
+    background-color: #0C2D48;
+    padding: 23px 40px;
+    width: 100%;
+    height: 80px;
+}
+
+#log-administrador {
+    margin-right: 20px;
+    color: white;
+    
+}
+
+#link-administrador {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+    padding-right: 40px;
+}
+
+#logo {
+    padding-left: 50px;
+    text-decoration: none;
+    color: white;
+}
+
+/* links e menu lateral */
+
+#sidebar {
+    float: left;
+    width: 250px;
+    height: 2500px;
+    padding-top: 30px;
+    background-color: #EBEBEB;
+    text-decoration: none;
+}
+
+#sidebar ul li {
+    background: #EBEBEB;
+    font-size: 1.1em;
+    padding: 20px 30px 20px 15px;
+}
+
+#sidebar ul li a {
+    padding-left: 5px;
+    color: black;
+    text-decoration: none;
+}
+
+#sidebar ul li:hover,#sidebar ul li a:hover{ /* coloca cor no fundo e links quando passa encima */
+	color: #0062A6;
+	background: white;
+}
+
+#sidebar .active {
+	background: white;
+	color: #0062A6;
+	transition: all 0.3s;
+}
+
+
+/* menu lateral que pressiona */
+.menu {
+ padding: 10px 60px 10px 30px;
+ margin: 0px 0px 30px 20px;
+ background-color: #EBEBEB;
+ border: 3px solid #0062A6;
+ border-bottom-right-radius: 50px;
+ border-top-right-radius: 50px;
+}
+
+/* Parte Principal - SUBMENU */
+
+#conteudo-principal {
+    padding: 15px;
+}
+
+ul#menu-interno {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.2em;
+}
+
+#menu-interno li a {
+  text-decoration: none;
+  color: black;
+}
+
+ul#menu-interno li .active {
+    color:#0062A6;
+    border-bottom: 3px solid #0062A6;
+}
+
+/* Parte Principal Formulário */
+
+.controle-formulario {
+	padding: 20px;
+	position: relative;
+}
+
+.controle-formulario label {
+    margin-left: 5px;
+}
+
+.controle-formulario input {
+	border: 2px solid #f0f0f0; 
+	border-radius: 10px;
+	font-size: 15px;
+	padding: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.botao-formulario {
+  color: white;
+  background-color: #0062A6;
+  border: 2px solid white;
+  border-radius: 20px 20px;
+  padding: 10px;
+  margin-top: 45px;
+}
+
+/*
+.row {
+    border: 1px solid red; 
+}
+*/
