@@ -190,4 +190,54 @@ ul#menu-interno li .active {
 
 
 
+/* longin-administrador */
 
+.corpo_administrador_login{
+    margin: 0px;
+    background: #0062A6;
+}
+
+
+.section_administrador_login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.logo_fundo_login{  
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    font-size: 150px;
+    color: rgba(255, 255, 255, 0.12);
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    
+}
+.container_login{
+    display: flex;
+    justify-content: center;
+    width: 431px;
+    height: 566px;
+   
+    background: rgba(12, 45, 72, 0.46);
+    border-radius: 20px;
+}
+
+.container_login_nomes{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    gap: 12px;
+}
+
+.container_login_nomes p{
+    margin: 0;
+}
+
+/* --------------------- */
