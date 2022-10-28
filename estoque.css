@@ -122,6 +122,19 @@ ul#menu-interno li .active {
     align-items: center;
 }
 
+/* tamanho dos inputs */
+ .maior {
+    width: 300px;
+}
+
+.mediano {
+    width: 150px;
+}
+
+.menor {
+    width: 100px;
+}
+
 .botao-formulario {
   color: white;
   background-color: #0062A6;
@@ -136,3 +149,36 @@ ul#menu-interno li .active {
     border: 1px solid red; 
 }
 */
+
+/* Personalizando tabela */
+
+.table {
+    margin-top: 50px;
+}
+
+.th {
+    border-bottom: none;
+}
+
+.tr {
+    border-top: 1px solid #EBEBEB;
+    border-bottom: 1px solid #EBEBEB;
+}
+
+#lista-contatos tr td {
+    padding: 15px;
+}
+
+/* cliente */
+
+#titulo-cadastro-cliente {
+    margin-right: 50%;
+    margin-left: 50%;
+    font-size: 1.5em;
+    border-bottom: 3px solid #EBEBEB;
+    font-weight: bold;
+}
+
+
+
+
