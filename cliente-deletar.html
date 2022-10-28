@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saint Farma</title>
+    <!--Fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estoque.css">
+    <!--Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/d34cd396d1.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar nav-azul">
+        
+             <div class="container-fluid">
+             <a id="logo" class="navbar-brand" href="">
+                <span><strong>Saint Farma</strong></span>
+             </a>
+             
+             <div id="log-administrador">
+              <a id="link-administrador" href=""><i class="fa-solid fa-user"></i> Administrador</a>
+            </div>
+            </div>
+
+         
+      </nav>
+    </header>
+    
+    
+   
+    <nav id="sidebar">
+       
+      
+        <button class="menu"><i class="fas fa-align-left"></i>Menu</button>
+      
+       
+      <ul class="list-unstyled" id="navegacao">
+        
+        <li class="estoque">
+          <i class="fa-solid fa-box"></i>
+           <a href="estoque.html">Estoque</a>
+        </li>
+
+        <li class="clientes active">
+          <i class="fa-solid fa-user-group"></i>
+          <a href="cliente.html">Cliente</a>
+        </li>
+
+        <li class="venda">
+          <i class="fa-sharp fa-solid fa-bag-shopping"></i>
+          <a href="venda.html">Venda</a>
+        </li>
+
+        <li class="venda-a-prazo">
+          <i class="fa-regular fa-credit-card"></i>
+          <a href="venda-a-prazo.html">Venda a Prazo</a>
+        </li>
+        
+      </ul>
+    </nav>
+    
+    <!--seção principal--> 
+    <section id="conteudo-principal">
+      <div class="container">
+      <div class="row">
+       <div class="col-8">
+          <ul id="menu-interno">
+            <li><a  href="cliente.html">Cadastrar</a></li>
+            <li><a  href="cliente-editar.html">Editar</a></li>
+            <li><a href="cliente-buscar.html">Buscar</a></li>
+            <li><a class="active" href="cliente-deletar.html">Deletar</a></li>
+          </ul>
+         </div>
+        </div>
+      </div>
+        
+        
+             <div class="container">
+              <div class="row">
+              <div class="col-12 controle-formulario">
+              <label for="Codigo-prod">Nome</label>
+              <input type="text" class="maior" name="codigo-produto" id="Codigo-prod" placeholder="Digite o nome do cliente..">
+               </div>
+
+              <div class="col-4 controle-formulario">
+                <label for="Nome-prod">Telefone</label>
+                <input type="text" class="maior" name="nome" id="Nome-prod" placeholder="Digite o telefone do cliente..">
+              </div>
+
+              <div class="col-4 controle-formulario">
+                <label for="Desc-prod">CPF</label>
+                <input type="text" class="maior" name="descricao-produto" id="Desc-prod" placeholder="Digite o CPF do cliente..">
+              </div>
+             
+              <div class="col-4">
+                <button type="submit" class="botao-formulario"><i class="fa-solid fa-magnifying-glass"></i> Buscar</button>
+              </div>
+
+              <div class="col">
+                <table class="table">
+                    <thead>
+                      <tr class="tr">
+                        <th class="th col-2">Nome</th>
+                        <th class="th col-2">Telefone</th>
+                        <th class="th col-2">CPF</th>
+                        <th class="th col-2">Cidade</th>
+                        <th class="th col-2">Rua</th>
+                        <th class="th col-2">Bairro</th>
+                        <th class="th col-2">Número da Casa</th>
+                      </tr>
+                  </thead>
+            
+                  <tbody id="lista-contatos">
+                       <tr>
+                        <td>Alisson</td>
+                        <td>84981218891</td>
+                        <td>13120255232</td>
+                        <td>Pau dos Ferros</td>
+                        <td>Rua dos coqueiros</td>
+                        <td>Manel</td>
+                        <td>83</td>
+                        <td>botão deletar</td>
+                       </tr>
+            
+                  </tbody>
+                
+                  </table>
+              </div>
+
+              </div>
+              </div>
+        
+
+      </div>
+     </section>
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
