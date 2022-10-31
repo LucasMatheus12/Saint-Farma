@@ -191,6 +191,10 @@ ul#menu-interno li .active {
 
 
 /* longin-administrador */
+.voltar_login_admoinistrador{
+    padding: 30px 40px;
+}
+
 
 .corpo_administrador_login{
     margin: 0px;
@@ -210,16 +214,18 @@ ul#menu-interno li .active {
     display: flex;
     justify-content: center;
     position: absolute;
+    align-items: center;
     font-size: 150px;
-    color: rgba(255, 255, 255, 0.12);
+    color: rgba(255, 255, 255, 0.073);
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
+    user-select: none;
     
 }
 .container_login{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     width: 431px;
     height: 566px;
    
@@ -228,16 +234,66 @@ ul#menu-interno li .active {
 }
 
 .container_login_nomes{
-    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: white;
     gap: 12px;
+    color: #f0f0f0;
+    margin-top: 99px;
 }
 
 .container_login_nomes p{
     margin: 0;
 }
 
+.form_administrador{
+    padding: 40px 15px; 
+    color: #f0f0f0;
+}
+
+.form_administrador_login{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+#email{
+    border-radius: 4px;
+    width: 400px;
+    height: 28px;
+    
+}
+
+#password{
+    border-radius: 4px;
+    width: 400px;
+    height: 28px;
+   
+}
+
+#botao_entrar{
+    background: #0C2D48;
+    color: #f0f0f0;
+    border: none;
+    border-radius: 5px;
+
+    height: 38px;
+    width: 127px;
+    left: 656px;
+    top: 648px;
+
+    margin-left: 35%;
+    margin-top: 10%;
+
+    cursor:pointer;
+}
+
+.esqueceu_login_administrador{
+    color: #f0f0f0;
+    margin-left: 32%;
+    margin-top: 10%;
+}
 /* --------------------- */
