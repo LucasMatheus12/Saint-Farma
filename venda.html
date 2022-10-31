@@ -47,12 +47,12 @@
            <a href="estoque.html">Estoque</a>
         </li>
 
-        <li class="clientes active">
+        <li class="clientes ">
           <i class="fa-solid fa-user-group"></i>
           <a href="cliente.html">Cliente</a>
         </li>
 
-        <li class="venda">
+        <li class="venda active">
           <i class="fa-sharp fa-solid fa-bag-shopping"></i>
           <a href="venda.html">Venda</a>
         </li>
@@ -71,9 +71,9 @@
       <div class="row">
        <div class="col-8">
           <ul id="menu-interno">
-            <li><a  href="cliente.html">Cadastrar</a></li>
-            <li><a  href="cliente-editar.html">Editar</a></li>
-            <li><a class="active" href="cliente-buscar.html">Buscar</a></li>
+            <li><a class="active" href="cliente.html">Cadastrar</a></li>
+            <li><a href="cliente-editar.html">Editar</a></li>
+            <li><a href="cliente-buscar.html">Buscar</a></li>
             <li><a href="cliente-deletar.html">Deletar</a></li>
           </ul>
          </div>
@@ -83,54 +83,48 @@
         
              <div class="container">
               <div class="row">
-              <div class="col-12 controle-formulario">
-              <label for="Codigo-prod">Nome</label>
-              <input type="text" class="maior" name="codigo-produto" id="Codigo-prod" placeholder="Digite o nome do cliente..">
+              <div class="col-2 controle-formulario">
+              <label for="Quantidade-venda">Quantidade</label>
+              <input type="text" class="menor" name="nome-cliente" id="Nome-cliente" placeholder="Digite o nome do cliente..">
                </div>
 
-              <div class="col-4 controle-formulario">
-                <label for="Nome-prod">Telefone</label>
-                <input type="text" class="maior" name="nome" id="Nome-prod" placeholder="Digite o telefone do cliente..">
+              <div class="col-10 controle-formulario">
+                <label for="Telefone-cliente">Cod. Produto</label>
+                <input type="text" class="menor" name="telefone-cliente" id="Telefone-cliente" placeholder="Digite o telefone do cliente..">
+              </div>
+
+              <div class="col-2 controle-formulario">
+                <label for="CPF-cliente">Valor a pagar</label>
+                <input type="text" class="mediano" name="cpf-cliente" id="CPF-cliente" placeholder="Digite o CPF do cliente..">
+              </div>
+
+              <div class="col-3 controle-formulario">
+                <label for="Cidade-cliente">Data da compra</label>
+                <input type="text" class="mediano" name="cidade-cliente" id="Cidade-cliente" placeholder="Digite a cidade" >
+              </div>
+
+              <div class="col-3 controle-formulario">
+                <label for="Cidade-cliente">Forma de Pagamento</label>
+                <input type="text" name="cidade-cliente" id="Cidade-cliente" placeholder="Digite a cidade" >
               </div>
 
               <div class="col-4 controle-formulario">
-                <label for="Desc-prod">CPF</label>
-                <input type="text" class="maior" name="descricao-produto" id="Desc-prod" placeholder="Digite o CPF do cliente..">
+                <label for="Cidade-cliente">Desconto</label>
+                <input type="text" name="cidade-cliente" id="Cidade-cliente" placeholder="Digite a cidade" >
               </div>
-             
+
+              <div class="col-4 controle-formulario">
+                <label for="Referencia-cliente">CPF do Cliente</label>
+                <input type="text" class="maior" name="referencia-cliente" id="Referencia-cliente" placeholder="Digite algum ponto de referência">
+              </div>
+
+              <div class="col-4 controle-formulario">
+                <label for="Rua-cliente">Nome do Funcionário</label>
+                <input type="text" class="maior" name="rua-cliente" id="Rua-cliente" placeholder="Digite a Rua em que mora">
+              </div>
+
               <div class="col-4">
-                <button type="submit" class="botao-formulario"><i class="fa-solid fa-magnifying-glass"></i> Buscar</button>
-              </div>
-
-              <div class="col">
-                <table class="table">
-                    <thead>
-                      <tr class="tr">
-                        <th class="th col-2">Nome</th>
-                        <th class="th col-2">Telefone</th>
-                        <th class="th col-2">CPF</th>
-                        <th class="th col-2">Cidade</th>
-                        <th class="th col-2">Rua</th>
-                        <th class="th col-2">Bairro</th>
-                        <th class="th col-2">Número da Casa</th>
-                      </tr>
-                  </thead>
-            
-                  <tbody id="lista-contatos">
-                       <tr>
-                        <td>Alisson</td>
-                        <td>84981218891</td>
-                        <td>13120255232</td>
-                        <td>Pau dos Ferros</td>
-                        <td>Rua dos coqueiros</td>
-                        <td>Manel</td>
-                        <td>83</td>
-                        
-                       </tr>
-            
-                  </tbody>
-                
-                  </table>
+                <button type="submit" class="botao-formulario"><i class="fa-regular fa-circle-check"></i> Cadastrar Vendas</button>
               </div>
 
               </div>
