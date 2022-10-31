@@ -244,6 +244,7 @@ ul#menu-interno li .active {
 
 .container_login_nomes p{
     margin: 0;
+    text-align: center;
 }
 
 .form_administrador{
