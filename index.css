@@ -46,6 +46,7 @@ body {
     padding-top: 30px;
     background-color: #EBEBEB;
     text-decoration: none;
+    position: fixed;
 }
 
 #sidebar ul li {
@@ -244,6 +245,7 @@ ul#menu-interno li .active {
 
 .container_login_nomes p{
     margin: 0;
+    text-align: center;
 }
 
 .form_administrador{
