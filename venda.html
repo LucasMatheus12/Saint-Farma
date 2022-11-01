@@ -34,105 +34,94 @@
     
     
    
-    <nav id="sidebar">
-       
+    <div class="wrapper">
+      <nav id="sidebar">
       
-        <button class="menu"><i class="fas fa-align-left"></i>Menu</button>
       
-       
-      <ul class="list-unstyled" id="navegacao">
-        
-        <li class="estoque">
-          <i class="fa-solid fa-box"></i>
-           <a href="estoque.html">Estoque</a>
-        </li>
-
-        <li class="clientes ">
-          <i class="fa-solid fa-user-group"></i>
-          <a href="cliente.html">Cliente</a>
-        </li>
-
-        <li class="venda active">
-          <i class="fa-sharp fa-solid fa-bag-shopping"></i>
-          <a href="venda.html">Venda</a>
-        </li>
-
-        <li class="venda-a-prazo">
-          <i class="fa-regular fa-credit-card"></i>
-          <a href="venda-a-prazo.html">Venda a Prazo</a>
-        </li>
-        
-      </ul>
-    </nav>
-    
-    <!--seção principal--> 
-    <section id="conteudo-principal">
-      <div class="container">
-      <div class="row">
-       <div class="col-8">
-          <ul id="menu-interno">
-            <li><a class="active" href="cliente.html">Cadastrar</a></li>
-            <li><a href="cliente-editar.html">Editar</a></li>
-            <li><a href="cliente-buscar.html">Buscar</a></li>
-            <li><a href="cliente-deletar.html">Deletar</a></li>
-          </ul>
-         </div>
+          <button class="menu"><i class="fas fa-align-left"></i>Menu</button>
+      
+      
+        <ul class="list-unstyled" id="navegacao">
+      
+          <li class="estoque">
+            <i class="fa-solid fa-box"></i>
+             <a href="estoque.html">Estoque</a>
+          </li>
+          <li class="clientes ">
+            <i class="fa-solid fa-user-group"></i>
+            <a href="cliente.html">Cliente</a>
+          </li>
+          <li class="venda active">
+            <i class="fa-sharp fa-solid fa-bag-shopping"></i>
+            <a href="venda.html">Venda</a>
+          </li>
+          <li class="venda-a-prazo">
+            <i class="fa-regular fa-credit-card"></i>
+            <a href="venda-a-prazo.html">Venda a Prazo</a>
+          </li>
+      
+        </ul>
+      </nav>
+      
+      <!--seção principal-->
+      <section id="conteudo-principal">
+        <div class="container">
+        <div class="row">
+         <div class="col-8">
+            <ul id="menu-interno">
+              <li><a class="active" href="cliente.html">Cadastrar</a></li>
+              <li><a href="cliente-editar.html">Editar</a></li>
+              <li><a href="cliente-buscar.html">Buscar</a></li>
+              <li><a href="cliente-deletar.html">Deletar</a></li>
+            </ul>
+           </div>
+          </div>
         </div>
-      </div>
-        
-        
-             <div class="container">
-              <div class="row">
-              <div class="col-2 controle-formulario">
-              <label for="Quantidade-venda">Quantidade</label>
-              <input type="text" class="menor" name="nome-cliente" id="Nome-cliente" placeholder="Digite o nome do cliente..">
-               </div>
-
-              <div class="col-10 controle-formulario">
-                <label for="Telefone-cliente">Cod. Produto</label>
-                <input type="text" class="menor" name="telefone-cliente" id="Telefone-cliente" placeholder="Digite o telefone do cliente..">
-              </div>
-
-              <div class="col-2 controle-formulario">
-                <label for="CPF-cliente">Valor a pagar</label>
-                <input type="text" class="mediano" name="cpf-cliente" id="CPF-cliente" placeholder="Digite o CPF do cliente..">
-              </div>
-
-              <div class="col-3 controle-formulario">
-                <label for="Cidade-cliente">Data da compra</label>
-                <input type="text" class="mediano" name="cidade-cliente" id="Cidade-cliente" placeholder="Digite a cidade" >
-              </div>
-
-              <div class="col-3 controle-formulario">
-                <label for="Cidade-cliente">Forma de Pagamento</label>
-                <input type="text" name="cidade-cliente" id="Cidade-cliente" placeholder="Digite a cidade" >
-              </div>
-
-              <div class="col-4 controle-formulario">
-                <label for="Cidade-cliente">Desconto</label>
-                <input type="text" name="cidade-cliente" id="Cidade-cliente" placeholder="Digite a cidade" >
-              </div>
-
-              <div class="col-4 controle-formulario">
-                <label for="Referencia-cliente">CPF do Cliente</label>
-                <input type="text" class="maior" name="referencia-cliente" id="Referencia-cliente" placeholder="Digite algum ponto de referência">
-              </div>
-
-              <div class="col-4 controle-formulario">
-                <label for="Rua-cliente">Nome do Funcionário</label>
-                <input type="text" class="maior" name="rua-cliente" id="Rua-cliente" placeholder="Digite a Rua em que mora">
-              </div>
-
-              <div class="col-4">
-                <button type="submit" class="botao-formulario"><i class="fa-regular fa-circle-check"></i> Cadastrar Vendas</button>
-              </div>
-
-              </div>
-              </div>
-        
-
-      </div>
-     </section>
+      
+      
+               <div class="container">
+                <div class="row">
+                <div class="col-2 controle-formulario">
+                <label for="Quantidade-venda">Quantidade</label>
+                <input type="text" class="menor" name="nome-cliente" id="Nome-cliente" placeholder="Digite o nome do cliente..">
+                 </div>
+                <div class="col-10 controle-formulario">
+                  <label for="Telefone-cliente">Cod. Produto</label>
+                  <input type="text" class="menor" name="telefone-cliente" id="Telefone-cliente" placeholder="Digite o telefone do cliente..">
+                </div>
+                <div class="col-2 controle-formulario">
+                  <label for="CPF-cliente">Valor a pagar</label>
+                  <input type="text" class="mediano" name="cpf-cliente" id="CPF-cliente" placeholder="Digite o CPF do cliente..">
+                </div>
+                <div class="col-3 controle-formulario">
+                  <label for="Cidade-cliente">Data da compra</label>
+                  <input type="text" class="mediano" name="cidade-cliente" id="Cidade-cliente" placeholder="Digite a cidade" >
+                </div>
+                <div class="col-3 controle-formulario">
+                  <label for="Cidade-cliente">Forma de Pagamento</label>
+                  <input type="text" name="cidade-cliente" id="Cidade-cliente" placeholder="Digite a cidade" >
+                </div>
+                <div class="col-4 controle-formulario">
+                  <label for="Cidade-cliente">Desconto</label>
+                  <input type="text" name="cidade-cliente" id="Cidade-cliente" placeholder="Digite a cidade" >
+                </div>
+                <div class="col-4 controle-formulario">
+                  <label for="Referencia-cliente">CPF do Cliente</label>
+                  <input type="text" class="maior" name="referencia-cliente" id="Referencia-cliente" placeholder="Digite algum ponto de referência">
+                </div>
+                <div class="col-4 controle-formulario">
+                  <label for="Rua-cliente">Nome do Funcionário</label>
+                  <input type="text" class="maior" name="rua-cliente" id="Rua-cliente" placeholder="Digite a Rua em que mora">
+                </div>
+                <div class="col-4">
+                  <button type="submit" class="botao-formulario"><i class="fa-regular fa-circle-check"></i> Cadastrar Vendas</button>
+                </div>
+                </div>
+                </div>
+      
+        </div>
+       </section>
+    </div>
     <script type="module" src="src/main.js"></script>
   </body>
 </html>

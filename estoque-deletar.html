@@ -34,133 +34,129 @@
     
     
    
-    <nav id="sidebar">
-       
+    <div class="wrapper">
+      <nav id="sidebar">
       
-        <button class="menu"><i class="fas fa-align-left"></i>Menu</button>
       
-       
-      <ul class="list-unstyled" id="navegacao">
-        
-        <li class="estoque active">
-          <i class="fa-solid fa-box"></i>
-           <a href="estoque.html">Estoque</a>
-        </li>
-
-        <li class="clientes">
-          <i class="fa-solid fa-user-group"></i>
-          <a href="cliente.html">Cliente</a>
-        </li>
-
-        <li class="venda">
-          <i class="fa-sharp fa-solid fa-bag-shopping"></i>
-          <a href="venda.html">Venda</a>
-        </li>
-
-        <li class="venda-a-prazo">
-          <i class="fa-regular fa-credit-card"></i>
-          <a href="venda-a-prazo.html">Venda a Prazo</a>
-        </li>
-        
-      </ul>
-    </nav>
-    
-    <!--seção principal--> 
-    <section id="conteudo-principal">
-      <div class="container">
-      <div class="row">
-       <div class="col-8">
-          <ul id="menu-interno">
-            <li><a  href="estoque.html">Cadastrar</a></li>
-            <li><a  href="estoque-editar.html">Editar</a></li>
-            <li><a href="estoque-buscar.html">Buscar</a></li>
-            <li><a class="active" href="estoque-deletar.html">Deletar</a></li>
-          </ul>
-         </div>
+          <button class="menu"><i class="fas fa-align-left"></i>Menu</button>
+      
+      
+        <ul class="list-unstyled" id="navegacao">
+      
+          <li class="estoque active">
+            <i class="fa-solid fa-box"></i>
+             <a href="estoque.html">Estoque</a>
+          </li>
+          <li class="clientes">
+            <i class="fa-solid fa-user-group"></i>
+            <a href="cliente.html">Cliente</a>
+          </li>
+          <li class="venda">
+            <i class="fa-sharp fa-solid fa-bag-shopping"></i>
+            <a href="venda.html">Venda</a>
+          </li>
+          <li class="venda-a-prazo">
+            <i class="fa-regular fa-credit-card"></i>
+            <a href="venda-a-prazo.html">Venda a Prazo</a>
+          </li>
+      
+        </ul>
+      </nav>
+      
+      <!--seção principal-->
+      <section id="conteudo-principal">
+        <div class="container">
+        <div class="row">
+         <div class="col-8">
+            <ul id="menu-interno">
+              <li><a  href="estoque.html">Cadastrar</a></li>
+              <li><a  href="estoque-editar.html">Editar</a></li>
+              <li><a href="estoque-buscar.html">Buscar</a></li>
+              <li><a class="active" href="estoque-deletar.html">Deletar</a></li>
+            </ul>
+           </div>
+          </div>
         </div>
-      </div>
-        
-        
-             <div class="container">
-              <div class="row">
-                <div class="col-2 controle-formulario">
-                  <label for="Codigo-prod">Cod. Produto</label>
-                  <input type="text" class="menor" name="codigo-produto" id="Codigo-prod" placeholder="Código">
-                   </div>
-    
-                  <div class="col-4 controle-formulario">
-                    <label for="Nome-prod">Nome</label>
-                    <input type="text" class="maior" name="nome" id="Nome-prod" placeholder="Digite o nome do produto">
-                  </div>
-    
-                  <div class="col-6 controle-formulario">
-                    <label for="Desc-prod">Descrição</label>
-                    <input type="text" class="maior" name="descricao-produto" id="Desc-prod" placeholder="Digite a descrição">
-                  </div>
-    
+      
+      
+               <div class="container">
+                <div class="row">
                   <div class="col-2 controle-formulario">
-                    <label for="Custo-prod">Preço de Custo</label>
-                    <input type="text" class="mediano" name="custo-produto" id="Custo-prod" placeholder="R$" >
-                  </div>
-    
-                  <div class="col-3 controle-formulario">
-                    <label for="Venda-prod">Preço de Venda</label>
-                    <input type="text" class="mediano" name="venda-produto" id="Venda-prod" placeholder="R$">
-                  </div>
-    
-                  <div class="col-3 controle-formulario">
-                    <label for="Quant-prod">Quantidade</label>
-                    <input type="text" name="quantidade-produto" id="Quant-prod" placeholder="Digite a Quantidade">
-                  </div>
-    
-                  <div class="col-4 controle-formulario">
-                    <label for="Data-prod">Data da Compra</label>
-                    <input type="text" class="mediano" name="data-produto" id="Data-prod" placeholder="Digite a Data">
-                  </div>
-                  
-                  <div class="col-3 controle-formulario">
-                    <label for="Val-prod">Validade</label>
-                    <input type="text" class="mediano" name="validade-produto" id="Val-prod" placeholder="Digite a validade">
-                  </div>
-
-              <div class="col-9">
-                <button type="submit" class="botao-formulario"><i class="fa-solid fa-magnifying-glass"></i> Buscar</button>
-              </div>
-            
-              <div class="col">
-                <table class="table">
-                    <thead>
-                      <tr class="tr">
-                        <th class="th col-2">Cod. Produto</th>
-                        <th class="th col-2">Nome</th>
-                        <th class="th col-2">Preço de Venda</th>
-                        <th class="th col-2">Quantidade</th>
-                        <th class="th col-2">Data da Compra</th>
-                        <th class="th col-2">Validade</th>
-                      </tr>
-                  </thead>
-            
-                  <tbody id="lista-contatos">
-                       <tr>
-                        <td>1</td>
-                        <td>Equipamento</td>
-                        <td>500R$</td>
-                        <td>100</td>
-                        <td>27/10/2022</td>
-                        <td>12/11/2022</td>
-                        <td>botão excluir</td>
-                       </tr>
-                  </tbody>
-                
-                  </table>
-              </div>
-
-              </div>
-              </div>
-        
-
-      </div>
-     </section>
+                    <label for="Codigo-prod">Cod. Produto</label>
+                    <input type="text" class="menor" name="codigo-produto" id="Codigo-prod" placeholder="Código">
+                     </div>
+      
+                    <div class="col-4 controle-formulario">
+                      <label for="Nome-prod">Nome</label>
+                      <input type="text" class="maior" name="nome" id="Nome-prod" placeholder="Digite o nome do produto">
+                    </div>
+      
+                    <div class="col-6 controle-formulario">
+                      <label for="Desc-prod">Descrição</label>
+                      <input type="text" class="maior" name="descricao-produto" id="Desc-prod" placeholder="Digite a descrição">
+                    </div>
+      
+                    <div class="col-2 controle-formulario">
+                      <label for="Custo-prod">Preço de Custo</label>
+                      <input type="text" class="mediano" name="custo-produto" id="Custo-prod" placeholder="R$" >
+                    </div>
+      
+                    <div class="col-3 controle-formulario">
+                      <label for="Venda-prod">Preço de Venda</label>
+                      <input type="text" class="mediano" name="venda-produto" id="Venda-prod" placeholder="R$">
+                    </div>
+      
+                    <div class="col-3 controle-formulario">
+                      <label for="Quant-prod">Quantidade</label>
+                      <input type="text" name="quantidade-produto" id="Quant-prod" placeholder="Digite a Quantidade">
+                    </div>
+      
+                    <div class="col-4 controle-formulario">
+                      <label for="Data-prod">Data da Compra</label>
+                      <input type="text" class="mediano" name="data-produto" id="Data-prod" placeholder="Digite a Data">
+                    </div>
+      
+                    <div class="col-3 controle-formulario">
+                      <label for="Val-prod">Validade</label>
+                      <input type="text" class="mediano" name="validade-produto" id="Val-prod" placeholder="Digite a validade">
+                    </div>
+                <div class="col-9">
+                  <button type="submit" class="botao-formulario"><i class="fa-solid fa-magnifying-glass"></i> Buscar</button>
+                </div>
+      
+                <div class="col">
+                  <table class="table">
+                      <thead>
+                        <tr class="tr">
+                          <th class="th col-2">Cod. Produto</th>
+                          <th class="th col-2">Nome</th>
+                          <th class="th col-2">Preço de Venda</th>
+                          <th class="th col-2">Quantidade</th>
+                          <th class="th col-2">Data da Compra</th>
+                          <th class="th col-2">Validade</th>
+                        </tr>
+                    </thead>
+      
+                    <tbody id="lista-contatos">
+                         <tr>
+                          <td>1</td>
+                          <td>Equipamento</td>
+                          <td>500R$</td>
+                          <td>100</td>
+                          <td>27/10/2022</td>
+                          <td>12/11/2022</td>
+                          <td>botão excluir</td>
+                         </tr>
+                    </tbody>
+      
+                    </table>
+                </div>
+                </div>
+                </div>
+      
+        </div>
+       </section>
+    </div>
     <script type="module" src="src/main.js"></script>
   </body>
 </html>
