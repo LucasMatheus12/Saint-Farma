@@ -69,9 +69,9 @@
         <div class="row">
          <div class="col-8">
             <ul id="menu-interno">
-              <li><a class="active" href="venda.html">Cadastrar</a></li>
+              <li><a href="venda.html">Cadastrar</a></li>
               <li><a href="venda-editar.html">Editar</a></li>
-              <li><a href="venda-buscar.html">Buscar</a></li>
+              <li><a class="active" href="venda-buscar.html">Buscar</a></li>
               <li><a href="venda-deletar.html">Deletar</a></li>
             </ul>
            </div>
@@ -81,42 +81,29 @@
       
                <div class="container">
                 <div class="row">
-                <div class="col-2 controle-formulario">
-                <label for="Quantidade-venda">Quantidade</label>
-                <input type="text" class="mediano" name="quantidade-venda" id="Quantidade-venda" placeholder="Quantidade">
-                 </div>
-                <div class="col-10 controle-formulario">
-                  <label for="Codigo-produto-venda">Cod. Produto</label>
-                  <input type="text" class="menor" name="codigo-produto-venda" id="Codigo-produto-venda" placeholder="Código">
-                </div>
-                <div class="col-2 controle-formulario">
-                  <label for="Valor-venda">Valor a pagar</label>
-                  <input type="text" class="mediano" name="valor-venda" id="Valor-venda" placeholder="R$">
-                </div>
-                <div class="col-3 controle-formulario">
-                  <label for="Data-venda">Data da compra</label>
-                  <input type="text" class="mediano" name="data-venda" id="Data-venda" >
-                </div>
-                <div class="col-4 controle-formulario">
-                  <label for="Pagamento-venda">Forma de Pagamento</label>
-                  <input type="text" class="maior" name="pagamento-venda" id="Pagamento-venda" placeholder="Selecione a forma de pagamento" >
-                </div>
-                <div class="col-3 controle-formulario">
-                  <label for="Desconto-venda">Desconto</label>
-                  <input type="text" name="desconto-venda" id="Desconto-venda" placeholder="Digite o valor do desconto" >
-                </div>
-                <div class="col-4 controle-formulario">
-                  <label for="CPF-venda">CPF do Cliente</label>
-                  <input type="text" class="maior" name="cpf-venda" id="CPF-venda" placeholder="CPF do cliente da venda">
-                </div>
-                <div class="col-4 controle-formulario">
-                  <label for="Funcionario-venda">Nome do Funcionário</label>
-                  <input type="text" class="maior" name="funcionario-venda" id="Funcionario-venda" placeholder="Funcionario da Venda">
-                </div>
-                <div class="col-4">
-                  <button type="submit" class="botao-formulario"><i class="fa-regular fa-circle-check"></i> Cadastrar Venda</button>
-                </div>
-                
+                    <div class="col-3 controle-formulario">
+                        <label for="Valor-venda">Valor Pago</label>
+                        <input type="text" class="mediano" name="valor-venda" id="Valor-venda" placeholder="R$">
+                      </div>
+                      <div class="col-3 controle-formulario">
+                        <label for="Data-venda">Data da compra</label>
+                        <input type="text" class="mediano" name="data-venda" id="Data-venda">
+                      </div>
+                      <div class="col-6 controle-formulario">
+                        <label for="Pagamento-venda">Forma de Pagamento</label>
+                        <input type="text" class="maior" name="pagamento-venda" id="Pagamento-venda" placeholder="Selecione a forma de pagamento" >
+                      </div>
+                      <div class="col-4 controle-formulario">
+                        <label for="CPF-venda">CPF do Cliente</label>
+                        <input type="text" class="maior" name="cpf-venda" id="CPF-venda" placeholder="CPF do cliente da venda">
+                      </div>
+                      <div class="col-4 controle-formulario">
+                        <label for="Funcionario-venda">Nome do Funcionário</label>
+                        <input type="text" class="maior" name="funcionario-venda" id="Funcionario-venda" placeholder="Funcionario da Venda">
+                      </div>
+                      <div class="col-4">
+                        <button type="submit" class="botao-formulario"><i class="fa-solid fa-magnifying-glass"></i> Buscar</button>
+                      </div>
                 <div class="col">
                   <table class="table">
                       <thead>

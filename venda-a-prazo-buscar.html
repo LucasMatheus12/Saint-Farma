@@ -51,11 +51,11 @@
             <i class="fa-solid fa-user-group"></i>
             <a href="cliente.html">Cliente</a>
           </li>
-          <li class="venda active">
+          <li class="venda ">
             <i class="fa-sharp fa-solid fa-bag-shopping"></i>
             <a href="venda.html">Venda</a>
           </li>
-          <li class="venda-a-prazo">
+          <li class="venda-a-prazo active">
             <i class="fa-regular fa-credit-card"></i>
             <a href="venda-a-prazo.html">Venda a Prazo</a>
           </li>
@@ -69,10 +69,10 @@
         <div class="row">
          <div class="col-8">
             <ul id="menu-interno">
-              <li><a class="active" href="venda.html">Cadastrar</a></li>
-              <li><a href="venda-editar.html">Editar</a></li>
-              <li><a href="venda-buscar.html">Buscar</a></li>
-              <li><a href="venda-deletar.html">Deletar</a></li>
+              <li><a href="venda-a-prazo.html">Cadastrar</a></li>
+              <li><a  href="venda-a-prazo-editar.html">Editar</a></li>
+              <li><a class="active" href="venda-a-prazo-buscar.html">Buscar</a></li>
+              <li><a href="venda-a-prazo-deletar.html">Deletar</a></li>
             </ul>
            </div>
           </div>
@@ -82,39 +82,35 @@
                <div class="container">
                 <div class="row">
                 <div class="col-2 controle-formulario">
-                <label for="Quantidade-venda">Quantidade</label>
-                <input type="text" class="mediano" name="quantidade-venda" id="Quantidade-venda" placeholder="Quantidade">
-                 </div>
-                <div class="col-10 controle-formulario">
-                  <label for="Codigo-produto-venda">Cod. Produto</label>
-                  <input type="text" class="menor" name="codigo-produto-venda" id="Codigo-produto-venda" placeholder="Código">
+                  <label for="Data-venda-prazo-compra">Data da compra</label>
+                  <input type="text" class="mediano" name="data-venda-prazo-compra" id="Data-venda-prazo-compra" >
                 </div>
                 <div class="col-2 controle-formulario">
-                  <label for="Valor-venda">Valor a pagar</label>
-                  <input type="text" class="mediano" name="valor-venda" id="Valor-venda" placeholder="R$">
+                    <label for="Data-venda-a-prazo">Data a Pagar</label>
+                    <input type="text" class="mediano" name="data-venda" id="Data-venda-a-prazo" >
+                  </div>
+                  <div class="col-2 controle-formulario">
+                    <label for="Parcelas-venda-a-prazo">Parcelas</label>
+                    <input type="text" class="mediano" name="data-venda" id="Parcelas-venda-a-prazo" >
+                  </div>
+                <div class="col-4 controle-formulario">
+                  <label for="Pagamento-venda-a-prazo">Forma de Pagamento</label>
+                  <input type="text" class="maior" name="pagamento-venda" id="Pagamento-venda-a-prazo" placeholder="Selecione a forma de pagamento" >
                 </div>
-                <div class="col-3 controle-formulario">
-                  <label for="Data-venda">Data da compra</label>
-                  <input type="text" class="mediano" name="data-venda" id="Data-venda" >
+                <div class="col-2 controle-formulario">
+                    <label for="Valor-venda-a-prazo">Valor a pagar</label>
+                    <input type="text" class="mediano" name="valor-venda" id="Valor-venda-a-prazo" placeholder="R$">
+                  </div>
+                <div class="col-4 controle-formulario">
+                  <label for="CPF-venda-a-prazo">CPF do Cliente</label>
+                  <input type="text" class="maior" name="cpf-venda" id="CPF-venda-a-prazo" placeholder="CPF do cliente da venda">
                 </div>
                 <div class="col-4 controle-formulario">
-                  <label for="Pagamento-venda">Forma de Pagamento</label>
-                  <input type="text" class="maior" name="pagamento-venda" id="Pagamento-venda" placeholder="Selecione a forma de pagamento" >
-                </div>
-                <div class="col-3 controle-formulario">
-                  <label for="Desconto-venda">Desconto</label>
-                  <input type="text" name="desconto-venda" id="Desconto-venda" placeholder="Digite o valor do desconto" >
-                </div>
-                <div class="col-4 controle-formulario">
-                  <label for="CPF-venda">CPF do Cliente</label>
-                  <input type="text" class="maior" name="cpf-venda" id="CPF-venda" placeholder="CPF do cliente da venda">
-                </div>
-                <div class="col-4 controle-formulario">
-                  <label for="Funcionario-venda">Nome do Funcionário</label>
-                  <input type="text" class="maior" name="funcionario-venda" id="Funcionario-venda" placeholder="Funcionario da Venda">
+                  <label for="Funcionario-venda-a-prazo">Nome do Funcionário</label>
+                  <input type="text" class="maior" name="funcionario-venda" id="Funcionario-venda-a-prazo" placeholder="Funcionario da Venda">
                 </div>
                 <div class="col-4">
-                  <button type="submit" class="botao-formulario"><i class="fa-regular fa-circle-check"></i> Cadastrar Venda</button>
+                  <button type="submit" class="botao-formulario"><i class="fa-solid fa-magnifying-glass"></i> Buscar</button>
                 </div>
                 
                 <div class="col">
@@ -125,9 +121,10 @@
                           <th class="th col-2">Produto</th>
                           <th class="th col-2">Quantidade</th>
                           <th class="th col-2">Data da Compra</th>
+                          <th class="th col-2">Data a Pagar</th>
                           <th class="th col-2">Forma de Pagamento</th>
                           <th class="th col-2">Valor a Pagar</th>
-                          <th class="th col-2">Desconto</th>
+                          <th class="th col-2">Parcelas</th>
                         </tr>
                     </thead>
       
@@ -135,11 +132,12 @@
                          <tr>
                           <td>1</td>
                           <td>Equipamento</td>
-                          <td>500R$</td>
-                          <td>100</td>
+                          <td>2</td>
                           <td>27/10/2022</td>
-                          <td>12/11/2022</td>
-                          <td>10%</td>
+                          <td>27/11/2022</td>
+                          <td>Pix</td>
+                          <td>100 R$</td>
+                          <td>3</td>
                          </tr>
                     </tbody>
       
