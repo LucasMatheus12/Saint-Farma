@@ -310,8 +310,24 @@ ul#menu-interno li .active {
     margin-top: 10%;
 }
 /* --------------------- */
-
+/* Ajustando width das paginas */
 .wrapper {
     display: flex;
     width: 100%;
+}
+
+/* Ajustando input dos relatorios */
+
+.input-radio {
+    position: relative;
+    top: 10px;
+    font-size: 18px;
+}
+
+.botao-input-radio {
+    color: white;
+    background-color: #0062A6;
+    border: 2px solid white;
+    border-radius: 20px 20px;
+    padding: 5px;
 }
