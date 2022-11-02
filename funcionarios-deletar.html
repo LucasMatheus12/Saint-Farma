@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saint Farma</title>
+    <!--Fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <!--Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/d34cd396d1.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar nav-azul">
+        
+             <div class="container-fluid">
+             <a id="logo" class="navbar-brand" href="">
+                <span><strong>Saint Farma</strong></span>
+             </a>
+             
+             <div id="log-administrador">
+                <a id="link-administrador" href="administrador-login.html"><i class="fa-solid fa-right-from-bracket icone-administrador"></i> Sair</a>
+              </div>
+            </div>
+
+         
+      </nav>
+    </header>
+    
+    
+   <div class="wrapper">
+     
+      <nav id="sidebar">
+     
+     
+          <button class="menu"><i class="fas fa-align-left icone-menu"></i>Menu</button>
+     
+     
+        <ul class="list-unstyled" id="navegacao">
+     
+            <li class="relatorio">
+                <i class="fa-solid fa-box"></i>
+                 <a href="relatorio.html">Relatório</a>
+              </li>
+              <li class="funcionarios active">
+                <i class="fa-solid fa-user-group"></i>
+                <a href="funcionarios.html">Funcionários</a>
+              </li>
+     
+        </ul>
+      </nav>
+     
+      <!--seção principal-->
+      <section id="conteudo-principal">
+        <div class="container">
+        <div class="row">
+         <div class="col-8">
+            <ul id="menu-interno">
+                <li><a  href="funcionarios.html">Cadastrar</a></li>
+                <li><a href="funcionarios-editar.html">Editar</a></li>
+                <li><a href="funcionarios-buscar.html">Buscar</a></li>
+                <li><a class="active" href="funcionarios-deletar.html">Deletar</a></li>
+            </ul>
+           </div>
+          </div>
+        </div>
+     
+     
+               <div class="container">
+                <div class="row">
+                    <div class="col-4 controle-formulario">
+                        <label for="Nome-funcionario">Nome</label>
+                        <input type="text" class="maior" name="nome-funcionario" id="Nome-funcionario" placeholder="Digite o nome do funcionário..">
+                         </div>
+                         
+                         <div class="col-8 controle-formulario">
+                          <label for="Salario-funcionario">Salário</label>
+                          <input type="text" class="mediano" name="salario-funcionario" id="Salario-funcionario" placeholder="R$">
+                        </div>
+          
+                        <div class="col-4 controle-formulario">
+                          <label for="Telefone-funcionario">Telefone</label>
+                          <input type="text" class="maior" name="telefone-funcionario" id="Telefone-funcionario" placeholder="Digite o telefone do funcionário..">
+                        </div>
+          
+                        <div class="col-4 controle-formulario">
+                          <label for="CPF-funcionario">CPF</label>
+                          <input type="text" class="maior" name="cpf-funcionario" id="CPF-funcionario" placeholder="Digite o CPF do funcionário..">
+                        </div>
+                       
+     
+                <div class="col-4">
+                  <button type="submit" class="botao-formulario"><i class="fa-solid fa-magnifying-glass"></i> Buscar</button>
+                </div>
+                <div class="col">
+                  <table class="table">
+                      <thead>
+                        <tr class="tr">
+                          <th class="th col-2">Nome</th>
+                          <th class="th col-2">Telefone</th>
+                          <th class="th col-2">CPF</th>
+                          <th class="th col-2">Cidade</th>
+                          <th class="th col-2">Rua</th>
+                          <th class="th col-2">Bairro</th>
+                          <th class="th col-2">Salário</th>
+                        </tr>
+                    </thead>
+     
+                    <tbody id="lista-contatos">
+                         <tr>
+                          <td>Alisson</td>
+                          <td>84981218891</td>
+                          <td>13120255232</td>
+                          <td>Pau dos Ferros</td>
+                          <td>Rua dos coqueiros</td>
+                          <td>Manel</td>
+                          <td>83</td>
+                          <td>botão deletar</td>
+                         </tr>
+     
+                    </tbody>
+     
+                    </table>
+                </div>
+                </div>
+                </div>
+     
+        </div>
+       </section>
+   </div>
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>

@@ -332,6 +332,18 @@ ul#menu-interno li .active {
     padding: 5px;
 }
 
+/* ajustando botões do pagamento */
+.alinhamento {
+ position: relative;
+ bottom: 10px;
+ left: 5px;
+ font-size: 15px;
+}
+.alinhamento-botao {
+    position: relative;
+    top: 5px;
+}
+
 details input{
     display: flex;
 }

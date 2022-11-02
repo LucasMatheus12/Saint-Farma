@@ -89,9 +89,18 @@
                         <label for="Data-venda">Data da compra</label>
                         <input type="text" class="mediano" name="data-venda" id="Data-venda">
                       </div>
-                      <div class="col-6 controle-formulario">
-                        <label for="Pagamento-venda">Forma de Pagamento</label>
-                        <input type="text" class="maior" name="pagamento-venda" id="Pagamento-venda" placeholder="Selecione a forma de pagamento" >
+                      <div class="col-4 controle-formulario">
+                        <!-- <label for="Pagamento-venda">Forma de Pagamento</label>
+                              <input type="text" class="maior" name="pagamento-venda" id="Pagamento-venda" placeholder="Selecione a forma de pagamento" > -->
+                        <details>
+                          <summary>Forma de pagamento</summary>
+                          <input class="alinhamento-botao" type="radio" id="cartao" name="fav_pagamento" value="1">
+                            <label class="alinhamento" for="cartao">Cartão</label>
+                          <input class="alinhamento-botao"  type="radio" id="cartao" name="fav_pagamento" value="2">
+                            <label class="alinhamento" for="cartao">Pix</label>
+                          <input class="alinhamento-botao"  type="radio" id="cartao" name="fav_pagamento" value="3">
+                            <label class="alinhamento" for="cartao">Dinheiro</label>
+                        </details>
                       </div>
                       <div class="col-4 controle-formulario">
                         <label for="CPF-venda">CPF do Cliente</label>
