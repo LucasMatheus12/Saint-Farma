@@ -39,17 +39,17 @@
   </header>
 
 
-  <div class="wrapper">
 
+  <div class="wrapper">
     <div class="navigation">
       <ul>
-        <li class="list ">
+        <li class="list">
           <a href="estoque.html">
             <span class="icone_menu_lateral"><i class="fa-solid fa-box"></i></span>
             <span class="titulo_menu_lateral">Estoque</span>
           </a>
         </li>
-        <li class="list active">
+        <li class="list">
           <a href="cliente.html">
             <span class="icone_menu_lateral"><i class="fa-solid fa-user-group"></i></span>
             <span class="titulo_menu_lateral">Cliente</span>
@@ -72,75 +72,22 @@
 
     <!--seção principal-->
     <section id="conteudo-principal">
+      <div>
+        <img class="img-fluid imagem-banner" src="./public/banner.png" alt="">
+     </div>
       <div class="container">
         <div class="row">
-          <div class="col-8">
-            <ul id="menu-interno">
-              <li><a href="cliente.html">Cadastrar</a></li>
-              <li><a class="active" href="cliente-editar.html">Editar</a></li>
-              <li><a href="cliente-buscar.html">Buscar</a></li>
-              <li><a href="cliente-deletar.html">Deletar</a></li>
-            </ul>
-          </div>
+            <div class="texto-fora col-12">
+                <span class="texto-banner">A Saint Farma é um software para farmácia que contém funcionalidades para gerir melhor o seu negócio. Nele temos: Controle de estoque, controle de clientes, vendas à vista, vendas a prazo e funções do controle do administrador, como controle de funcionários e relatórios de vendas. </span>
+              </div>
+              
         </div>
       </div>
-
-
-      <div class="container">
-        <div class="row">
-          <div class="col-12 controle-formulario">
-            <label for="Codigo-prod">Nome</label>
-            <input type="text" class="maior" name="codigo-produto" id="Codigo-prod"
-              placeholder="Digite o nome do cliente..">
-          </div>
-          <div class="col-4 controle-formulario">
-            <label for="Nome-prod">Telefone</label>
-            <input type="text" class="maior" name="nome" id="Nome-prod" placeholder="Digite o telefone do cliente..">
-          </div>
-          <div class="col-4 controle-formulario">
-            <label for="Desc-prod">CPF</label>
-            <input type="text" class="maior" name="descricao-produto" id="Desc-prod"
-              placeholder="Digite o CPF do cliente..">
-          </div>
-
-          <div class="col-4">
-            <button type="submit" class="botao-formulario"><i class="fa-solid fa-magnifying-glass"></i> Buscar</button>
-          </div>
-          <div class="col">
-            <table class="table">
-              <thead>
-                <tr class="tr">
-                  <th class="th col-2">Nome</th>
-                  <th class="th col-2">Telefone</th>
-                  <th class="th col-2">CPF</th>
-                  <th class="th col-2">Cidade</th>
-                  <th class="th col-2">Rua</th>
-                  <th class="th col-2">Bairro</th>
-                  <th class="th col-2">Número da Casa</th>
-                </tr>
-              </thead>
-
-              <tbody id="lista-contatos">
-                <tr>
-                  <td>Alisson</td>
-                  <td>(84)98121-8891</td>
-                  <td>131.202.552-32</td>
-                  <td>Pau dos Ferros</td>
-                  <td>Rua dos coqueiros</td>
-                  <td>Manel</td>
-                  <td>83</td>
-                  <td>botão editar</td>
-                </tr>
-
-              </tbody>
-
-            </table>
-          </div>
-        </div>
-      </div>
-
+     
+    
   </div>
-  </section>
+ </section> 
+ 
   </div>
   <script src="src/index.js"></script>
 </body>
