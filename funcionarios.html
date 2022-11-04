@@ -1,39 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Saint Farma</title>
-    <!--Fontes-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
-    <!--Bootstrap -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <!--Font Awesome-->
-    <script src="https://kit.fontawesome.com/d34cd396d1.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <header>
-      <nav class="navbar nav-azul">
-        
-             <div class="container-fluid">
-             <a id="logo" class="navbar-brand" href="index.html">
-                <span><strong>Saint Farma</strong></span>
-             </a>
-             
-             <div id="log-administrador">
-                <a id="link-administrador" href="administrador-login.html"><i class="fa-solid fa-right-from-bracket icone-administrador"></i> Sair</a>
-              </div>
-            </div>
 
-         
-      </nav>
-    </header>
-    
-    
-   <div class="wrapper">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saint Farma</title>
+  <!--Fontes-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Poppins:wght@400;500;600;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <!--Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <!--Font Awesome-->
+  <script src="https://kit.fontawesome.com/d34cd396d1.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar nav-azul">
+
+      <div class="container-fluid">
+        <a id="logo" class="navbar-brand" href="index.html">
+          <span><strong>Saint Farma</strong></span>
+        </a>
+
+        <div id="log-administrador">
+          <a id="link-administrador" href="administrador-login.html"><i
+              class="fa-solid fa-right-from-bracket icone-administrador"></i> Sair</a>
+        </div>
+      </div>
+
+
+    </nav>
+  </header>
+
+
+  <div class="wrapper">
     <div class="navigation">
       <ul>
         <li class="list ">
@@ -50,86 +56,93 @@
         </li>
       </ul>
     </div>
-    
-    <!--seção principal--> 
+
+    <!--seção principal-->
     <section id="conteudo-principal">
       <div class="container">
-      <div class="row">
-       <div class="col-8">
-          <ul id="menu-interno">
-            <li><a class="active" href="funcionarios.html">Cadastrar</a></li>
-            <li><a href="funcionarios-editar.html">Editar</a></li>
-            <li><a href="funcionarios-buscar.html">Buscar</a></li>
-            <li><a href="funcionarios-deletar.html">Deletar</a></li>
-          </ul>
-         </div>
+        <div class="row">
+          <div class="col-8">
+            <ul id="menu-interno">
+              <li><a class="active" href="funcionarios.html">Cadastrar</a></li>
+              <li><a href="funcionarios-editar.html">Editar</a></li>
+              <li><a href="funcionarios-buscar.html">Buscar</a></li>
+              <li><a href="funcionarios-deletar.html">Deletar</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-        
-        
-             <div class="container">
-              <div class="row">
-              <div class="col-4 controle-formulario">
-              <label for="Nome-funcionario">Nome</label>
-              <input type="text" class="maior" name="nome-funcionario" id="Nome-funcionario" placeholder="Digite o nome do funcionário..">
-               </div>
-               
-               <div class="col-8 controle-formulario">
-                <label for="Salario-funcionario">Salário</label>
-                <input type="text" class="mediano" name="salario-funcionario" id="Salario-funcionario" placeholder="R$">
-              </div>
-
-              <div class="col-4 controle-formulario">
-                <label for="Telefone-funcionario">Telefone</label>
-                <input type="text" class="maior" name="telefone-funcionario" id="Telefone-funcionario" placeholder="Digite o telefone do funcionário..">
-              </div>
-
-              <div class="col-8 controle-formulario">
-                <label for="CPF-funcionario">CPF</label>
-                <input type="text" class="maior" name="cpf-funcionario" id="CPF-funcionario" placeholder="Digite o CPF do funcionário..">
-              </div>
-             
-              <div class="col-12 titulo-cadastro">
-                   <span id="titulo-cadastro-cliente">Endereço</span>
-              </div>
 
 
-              <div class="col-3 controle-formulario">
-                <label for="Cidade-funcionario">Cidade</label>
-                <input type="text" name="cidade-funcionario" id="Cidade-funcionario" placeholder="Digite a cidade" >
-              </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-4 controle-formulario">
+            <label for="Nome-funcionario">Nome</label>
+            <input type="text" class="maior" name="nome-funcionario" id="Nome-funcionario"
+              placeholder="Digite o nome do funcionário..">
+          </div>
 
-              <div class="col-9 controle-formulario">
-                <label for="Referencia-funcionario">Referência</label>
-                <input type="text" class="maior" name="referencia-funcionario" id="Referencia-funcionario" placeholder="Digite algum ponto de referência">
-              </div>
+          <div class="col-8 controle-formulario">
+            <label for="Salario-funcionario">Salário</label>
+            <input type="text" class="mediano" name="salario-funcionario" id="Salario-funcionario" placeholder="R$">
+          </div>
 
-              <div class="col-4 controle-formulario">
-                <label for="Rua-funcionario">Rua</label>
-                <input type="text" class="maior" name="rua-funcionario" id="Rua-funcionario" placeholder="Digite a Rua em que mora">
-              </div>
+          <div class="col-4 controle-formulario">
+            <label for="Telefone-funcionario">Telefone</label>
+            <input type="text" class="maior" name="telefone-funcionario" id="Telefone-funcionario"
+              placeholder="Digite o telefone do funcionário..">
+          </div>
 
-              <div class="col-3 controle-formulario">
-                <label for="Bairro-funcionario">Bairro</label>
-                <input type="text" name="bairro-funcionario" id="Bairro-funcionario" placeholder="Digite o Bairro em que mora">
-              </div>
-              
-              <div class="col-3 controle-formulario">
-                <label for="Numero-funcionario">N°</label>
-                <input type="text" name="numero-funcionario" id="Numero-funcionario" placeholder="Digite o número da casa">
-              </div>
+          <div class="col-8 controle-formulario">
+            <label for="CPF-funcionario">CPF</label>
+            <input type="text" class="maior" name="cpf-funcionario" id="CPF-funcionario"
+              placeholder="Digite o CPF do funcionário..">
+          </div>
 
-              <div class="col-2">
-                <button type="submit" class="botao-formulario"><i class="fa-regular fa-circle-check"></i> Cadastrar</button>
-              </div>
+          <div class="col-12 titulo-cadastro">
+            <span id="titulo-cadastro-cliente">Endereço</span>
+          </div>
 
-              </div>
-              </div>
-        
 
+          <div class="col-3 controle-formulario">
+            <label for="Cidade-funcionario">Cidade</label>
+            <input type="text" name="cidade-funcionario" id="Cidade-funcionario" placeholder="Digite a cidade">
+          </div>
+
+          <div class="col-9 controle-formulario">
+            <label for="Referencia-funcionario">Referência</label>
+            <input type="text" class="maior" name="referencia-funcionario" id="Referencia-funcionario"
+              placeholder="Digite algum ponto de referência">
+          </div>
+
+          <div class="col-4 controle-formulario">
+            <label for="Rua-funcionario">Rua</label>
+            <input type="text" class="maior" name="rua-funcionario" id="Rua-funcionario"
+              placeholder="Digite a Rua em que mora">
+          </div>
+
+          <div class="col-3 controle-formulario">
+            <label for="Bairro-funcionario">Bairro</label>
+            <input type="text" name="bairro-funcionario" id="Bairro-funcionario"
+              placeholder="Digite o Bairro em que mora">
+          </div>
+
+          <div class="col-3 controle-formulario">
+            <label for="Numero-funcionario">N°</label>
+            <input type="text" name="numero-funcionario" id="Numero-funcionario" placeholder="Digite o número da casa">
+          </div>
+
+          <div class="col-2">
+            <button type="submit" class="botao-formulario"><i class="fa-regular fa-circle-check"></i> Cadastrar</button>
+          </div>
+
+        </div>
       </div>
-     </section>
-    </div>
-    <script type="module" src="src/main.js"></script>
-  </body>
+
+
+  </div>
+  </section>
+  </div>
+  <script type="module" src="src/main.js"></script>
+</body>
+
 </html>
