@@ -43,7 +43,7 @@
   <div class="wrapper">
     <div class="navigation">
       <ul>
-        <li class="list active">
+        <li class="list">
           <a href="estoque.html">
             <span class="icone_menu_lateral"><i class="fa-solid fa-box"></i></span>
             <span class="titulo_menu_lateral">Estoque</span>
@@ -55,7 +55,7 @@
             <span class="titulo_menu_lateral">Cliente</span>
           </a>
         </li>
-        <li class="list">
+        <li class="list active">
           <a href="venda.html">
             <span class="icone_menu_lateral"><i class="fa-sharp fa-solid fa-bag-shopping"></i></span>
             <span class="titulo_menu_lateral">Venda</span>
@@ -76,10 +76,10 @@
         <div class="row">
           <div class="col-8">
             <ul id="menu-interno">
-              <li><a href="estoque.html">Cadastrar</a></li>
-              <li><a href="estoque-editar.html">Editar</a></li>
-              <li><a href="estoque-buscar.html">Buscar</a></li>
-              <li><a class="active" href="estoque-deletar.html">Deletar</a></li>
+              <li><a href="venda.html">Cadastrar</a></li>
+              <li><a class="active" href="venda-editar.html">Editar</a></li>
+              <li><a href="venda-buscar.html">Buscar</a></li>
+              <li><a href="venda-deletar.html">Deletar</a></li>
             </ul>
           </div>
         </div>
@@ -89,46 +89,49 @@
       <div class="container">
         <div class="row">
           <div class="col-2 controle-formulario">
-            <label for="Codigo-prod">Cod. Produto</label>
-            <input type="text" class="menor" name="codigo-produto" id="Codigo-prod" placeholder="Código">
+            <label for="Quantidade-venda">Quantidade</label>
+            <input type="text" class="mediano" name="quantidade-venda" id="Quantidade-venda" placeholder="Quantidade">
           </div>
-
-          <div class="col-4 controle-formulario">
-            <label for="Nome-prod">Nome</label>
-            <input type="text" class="maior" name="nome" id="Nome-prod" placeholder="Digite o nome do produto">
+          <div class="col-10 controle-formulario">
+            <label for="Codigo-produto-venda">Cod. Produto</label>
+            <input type="text" class="menor" name="codigo-produto-venda" id="Codigo-produto-venda" placeholder="Código">
           </div>
-
-          <div class="col-6 controle-formulario">
-            <label for="Desc-prod">Descrição</label>
-            <input type="text" class="maior" name="descricao-produto" id="Desc-prod" placeholder="Digite a descrição">
-          </div>
-
           <div class="col-2 controle-formulario">
-            <label for="Custo-prod">Preço de Custo</label>
-            <input type="text" class="mediano" name="custo-produto" id="Custo-prod" placeholder="R$">
+            <label for="Valor-venda">Valor a pagar</label>
+            <input type="text" class="mediano" name="valor-venda" id="Valor-venda" placeholder="R$">
           </div>
-
           <div class="col-3 controle-formulario">
-            <label for="Venda-prod">Preço de Venda</label>
-            <input type="text" class="mediano" name="venda-produto" id="Venda-prod" placeholder="R$">
+            <label for="Data-venda">Data da compra</label>
+            <input type="text" class="mediano" name="data-venda" id="Data-venda">
           </div>
-
-          <div class="col-3 controle-formulario">
-            <label for="Quant-prod">Quantidade</label>
-            <input type="text" name="quantidade-produto" id="Quant-prod" placeholder="Digite a Quantidade">
-          </div>
-
           <div class="col-4 controle-formulario">
-            <label for="Data-prod">Data da Compra</label>
-            <input type="text" class="mediano" name="data-produto" id="Data-prod" placeholder="Digite a Data">
+            <!-- <label for="Pagamento-venda">Forma de Pagamento</label>
+                  <input type="text" class="maior" name="pagamento-venda" id="Pagamento-venda" placeholder="Selecione a forma de pagamento" > -->
+            <details>
+              <summary>Forma de pagamento</summary>
+              <input class="alinhamento-botao" type="radio" id="cartao" name="fav_pagamento" value="1">
+                <label class="alinhamento" for="cartao">Cartão</label>
+              <input class="alinhamento-botao"  type="radio" id="cartao" name="fav_pagamento" value="2">
+                <label class="alinhamento" for="cartao">Pix</label>
+              <input class="alinhamento-botao"  type="radio" id="cartao" name="fav_pagamento" value="3">
+                <label class="alinhamento" for="cartao">Dinheiro</label>
+            </details>
           </div>
-
           <div class="col-3 controle-formulario">
-            <label for="Val-prod">Validade</label>
-            <input type="text" class="mediano" name="validade-produto" id="Val-prod" placeholder="Digite a validade">
+            <label for="Desconto-venda">Desconto</label>
+            <input type="text" name="desconto-venda" id="Desconto-venda" placeholder="Digite o valor do desconto">
           </div>
-          <div class="col-9">
-            <button type="submit" class="botao-formulario"><i class="fa-solid fa-magnifying-glass"></i> Buscar</button>
+          <div class="col-4 controle-formulario">
+            <label for="CPF-venda">CPF do Cliente</label>
+            <input type="text" class="maior" name="cpf-venda" id="CPF-venda" placeholder="CPF do cliente da venda">
+          </div>
+          <div class="col-4 controle-formulario">
+            <label for="Funcionario-venda">Nome do Funcionário</label>
+            <input type="text" class="maior" name="funcionario-venda" id="Funcionario-venda"
+              placeholder="Funcionario da Venda">
+          </div>
+          <div class="col-4">
+            <button type="submit" class="botao-formulario"><i class="fa-regular fa-circle-check"></i> Confirmar Edição </button>
           </div>
 
           <div class="col">
@@ -136,35 +139,37 @@
               <thead>
                 <tr class="tr">
                   <th class="th col-2">Cod. Produto</th>
-                  <th class="th col-2">Nome</th>
-                  <th class="th col-2">Preço de Venda</th>
+                  <th class="th col-2">Produto</th>
                   <th class="th col-2">Quantidade</th>
                   <th class="th col-2">Data da Compra</th>
-                  <th class="th col-2">Validade</th>
+                  <th class="th col-2">Forma de Pagamento</th>
+                  <th class="th col-2">Valor a Pagar</th>
+                  <th class="th col-2">Desconto</th>
                 </tr>
               </thead>
 
               <tbody id="lista-contatos">
                 <tr>
-                  <td>1</td>
-                  <td>Equipamento</td>
-                  <td>500R$</td>
-                  <td>100</td>
+                  <td>3</td>
+                  <td>Bandeite</td>
+                  <td>3</td>
                   <td>27/10/2022</td>
-                  <td>12/11/2022</td>
-                  <td>botão excluir</td>
+                  <td>Dinheiro</td>
+                  <td>500 R$</td>
+                  <td>10%</td>
                 </tr>
               </tbody>
 
             </table>
           </div>
+
         </div>
       </div>
 
   </div>
   </section>
   </div>
-  <script src="src/index.js"></script>
+  <script type="module" src="src/main.js"></script>
 </body>
 
 </html>
