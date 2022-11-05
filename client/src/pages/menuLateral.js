@@ -1,4 +1,6 @@
 // Seletor de Menu lateral 
+
+
 const list = document.querySelectorAll('.list');
 
 function ativarLink() {
