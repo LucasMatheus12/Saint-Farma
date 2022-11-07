@@ -68,12 +68,12 @@ app.get("/estoque/editar-interno", (req, res) => res
 //Rota venda 
 app.get("/venda", (req, res) => res
 .status(200)
-.send({mensagem: "Bem vindo ao teste!"
+.send({mensagem: "Bem vindo a venda!"
 }))
 
 app.get("/venda/editar", (req, res) => res
 .status(200)
-.send({mensagem: "Bem vindo a venda!"
+.send({mensagem: "Bem vindo a venda editar!"
 }))
 
 app.get("/venda/buscar", (req, res) => res
@@ -83,7 +83,7 @@ app.get("/venda/buscar", (req, res) => res
 
 app.get("/venda/deletar", (req, res) => res
 .status(200)
-.send({mensagem: "Bem vindo a venda buscar!"
+.send({mensagem: "Bem vindo a venda deletar!"
 }))
 
 app.get("/venda/editar-interno", (req, res) => res
