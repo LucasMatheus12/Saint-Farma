@@ -73,22 +73,22 @@ app.get("/venda", (req, res) => res
 
 app.get("/venda/editar", (req, res) => res
 .status(200)
-.send({mensagem: "Bem vindo ao teste!"
+.send({mensagem: "Bem vindo a venda!"
 }))
 
 app.get("/venda/buscar", (req, res) => res
 .status(200)
-.send({mensagem: "Bem vindo ao teste!"
+.send({mensagem: "Bem vindo a venda buscar!"
 }))
 
 app.get("/venda/deletar", (req, res) => res
 .status(200)
-.send({mensagem: "Bem vindo ao teste!"
+.send({mensagem: "Bem vindo a venda buscar!"
 }))
 
 app.get("/venda/editar-interno", (req, res) => res
 .status(200)
-.send({mensagem: "Bem vindo ao teste!"
+.send({mensagem: "Bem vindo a venda editar interno!"
 }))
 
 // ----------------------------------
@@ -123,27 +123,27 @@ app.get("/venda/editar-interno", (req, res) => res
 //Rota funcionarios 
 app.get("/funcionarios", (req, res) => res
 .status(200)
-.send({mensagem: "Bem vindo ao teste!"
+.send({mensagem: "Bem vindo ao funcionarios!"
 }))
 
 app.get("/funcionarios/editar", (req, res) => res
 .status(200)
-.send({mensagem: "Bem vindo ao teste!"
+.send({mensagem: "Bem vindo ao funcionario editar!"
 }))
 
 app.get("/funcionarios/buscar", (req, res) => res
 .status(200)
-.send({mensagem: "Bem vindo ao teste!"
+.send({mensagem: "Bem vindo ao funcionario buscar!"
 }))
 
 app.get("/funcionarios/deletar", (req, res) => res
 .status(200)
-.send({mensagem: "Bem vindo ao teste!"
+.send({mensagem: "Bem vindo ao funcionario deletar!"
 }))
 
 app.get("/funcionarios/editar-interno", (req, res) => res
 .status(200)
-.send({mensagem: "Bem vindo ao teste!"
+.send({mensagem: "Bem vindo ao funcionario ediatr-interno!"
 }))
 // ----------------------------------
 
