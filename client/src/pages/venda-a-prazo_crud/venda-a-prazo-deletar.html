@@ -169,7 +169,16 @@
   </div>
   </section>
   </div>
-  <script type="module" src="src/main.js"></script>
+  <script src="/client/src/pages/menuLateral.js"></script>
+  <script>
+    const venda_prazo_editar = async () =>{
+    const url = new URL("http://localhost:3000/venda-a-prazo/deletar")
+    let result = await fetch(url)
+    result = await result.json()
+    console.log(result)
+}
+    venda_prazo_editar(); 
+  </script>
 </body>
 
 </html>

@@ -96,27 +96,27 @@ app.get("/venda/editar-interno", (req, res) => res
 //Rota venda-a-prazo 
 app.get("/venda-a-prazo", (req, res) => res
 .status(200)
-.send({mensagem: "Bem vindo ao teste!"
+.send({mensagem: "Bem vindo a venda-a-prazo!"
 }))
 
 app.get("/venda-a-prazo/editar", (req, res) => res
 .status(200)
-.send({mensagem: "Bem vindo ao teste!"
+.send({mensagem: "Bem vindo a venda-a-prazo editar!"
 }))
 
 app.get("/venda-a-prazo/buscar", (req, res) => res
 .status(200)
-.send({mensagem: "Bem vindo ao teste!"
+.send({mensagem: "Bem vindo a venda-a-prazo buscar!"
 }))
 
 app.get("/venda-a-prazo/deletar", (req, res) => res
 .status(200)
-.send({mensagem: "Bem vindo ao teste!"
+.send({mensagem: "Bem vindo a venda-a-prazo deletar!"
 }))
 
-app.get("/venda/editar-interno", (req, res) => res
+app.get("/venda-a-prazo/editar-interno", (req, res) => res
 .status(200)
-.send({mensagem: "Bem vindo ao teste!"
+.send({mensagem: "Bem vindo a venda-a-prazo editar ineterno!"
 }))
 // ----------------------------------
 
