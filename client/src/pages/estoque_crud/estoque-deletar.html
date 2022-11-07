@@ -165,6 +165,15 @@
   </section>
   </div>
   <script src="/client/src/menuLateral.js"></script>
+  <script>
+    const estoque_deletar = async () =>{
+    const url = new URL("http://localhost:3000/estoque/deletar")
+    let result = await fetch(url)
+    result = await result.json()
+    console.log(result)
+}
+  estoque_deletar(); 
+  </script>
 </body>
 
 </html>

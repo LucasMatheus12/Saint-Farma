@@ -41,27 +41,27 @@ app.get("/cliente/editar-interno", (req, res) => res
 //Rota estoque 
 app.get("/estoque", (req, res) => res
 .status(200)
-.send({mensagem: "Bem vindo ao teste!"
+.send({mensagem: "Bem vindo ao estoque!"
 }))
 
 app.get("/estoque/editar", (req, res) => res
 .status(200)
-.send({mensagem: "Bem vindo ao teste!"
+.send({mensagem: "Bem vindo ao estoque editar!"
 }))
 
 app.get("/estoque/buscar", (req, res) => res
 .status(200)
-.send({mensagem: "Bem vindo ao teste!"
+.send({mensagem: "Bem vindo ao estoque buscar!"
 }))
 
 app.get("/estoque/deletar", (req, res) => res
 .status(200)
-.send({mensagem: "Bem vindo ao teste!"
+.send({mensagem: "Bem vindo ao estoque deletar!"
 }))
 
 app.get("/estoque/editar-interno", (req, res) => res
 .status(200)
-.send({mensagem: "Bem vindo ao teste!"
+.send({mensagem: "Bem vindo ao estoque editar interno!"
 }))
 // ----------------------------------
 

@@ -165,6 +165,15 @@
   </section>
   </div>
   <script src="/client/src/menuLateral.js"></script>
+  <script>
+    const estoque_buscar = async () =>{
+    const url = new URL("http://localhost:3000/estoque/buscar")
+    let result = await fetch(url)
+    result = await result.json()
+    console.log(result)
+}
+  estoque_buscar(); 
+  </script>
 </body>
 
 </html>
