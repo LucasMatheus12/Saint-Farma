@@ -132,6 +132,15 @@
   </section>
   </div>
   <script src="menuLateral.js"></script>
+  <script>
+    const relatorio = async () =>{
+    const url = new URL("http://localhost:3000/relatorio")
+    let result = await fetch(url)
+    result = await result.json()
+    console.log(result)
+}
+  relatorio(); 
+  </script>
 </body>
 
 </html>

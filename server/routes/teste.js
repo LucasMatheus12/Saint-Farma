@@ -12,27 +12,27 @@ const port = 3000;
 //Rota cliente 
 app.get("/cliente", (req, res) => res
 .status(200)
-.send({mensagem: "Bem vindo ao teste!"
+.send({mensagem: "Bem vindo ao cliente!"
 }))
 
 app.get("/cliente/editar", (req, res) => res
 .status(200)
-.send({mensagem: "Bem vindo ao teste!"
+.send({mensagem: "Bem vindo ao cliente editar!"
 }))
 
 app.get("/cliente/buscar", (req, res) => res
 .status(200)
-.send({mensagem: "Bem vindo ao teste!"
+.send({mensagem: "Bem vindo ao cliente buscar!"
 }))
 
 app.get("/cliente/deletar", (req, res) => res
 .status(200)
-.send({mensagem: "Bem vindo ao teste!"
+.send({mensagem: "Bem vindo ao cliente deletar!"
 }))
 
-app.get("/venda/editar-interno", (req, res) => res
+app.get("/cliente/editar-interno", (req, res) => res
 .status(200)
-.send({mensagem: "Bem vindo ao teste!"
+.send({mensagem: "Bem vindo ao cliente editar interno!"
 }))
 
 // ----------------------------------
@@ -151,6 +151,13 @@ app.get("/funcionarios/editar-interno", (req, res) => res
 app.get("/home", (req, res) => res
 .status(200)
 .send({mensagem: "Bem vindo ao teste!"
+}))
+// ------------------------------------
+
+// rota do relatorio
+app.get("/relatorio", (req, res) => res
+.status(200)
+.send({mensagem: "Bem vindo ao relatorio!"
 }))
 // ------------------------------------
 app.listen(port, () =>{
