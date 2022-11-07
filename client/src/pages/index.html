@@ -87,6 +87,15 @@
     </section>
   </div>
   <script src="menuLateral.js"></script>
+  <script>
+    const home = async () =>{
+    const url = new URL("http://localhost:3000/home")
+    let result = await fetch(url)
+    result = await result.json()
+    console.log(result)
+}
+  home(); 
+  </script>
 </body>
 
 </html>

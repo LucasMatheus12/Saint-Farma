@@ -171,6 +171,16 @@
   </section>
   </div>
   <script src="menuLateral.js"></script>
+  <script>
+    const venda = async () =>{
+    const url = new URL("http://localhost:3000/venda")
+    let result = await fetch(url)
+    result = await result.json()
+    console.log(result)
+}
+venda(); 
+  </script>
+  </script>
 </body>
 
 </html>

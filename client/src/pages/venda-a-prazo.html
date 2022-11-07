@@ -180,6 +180,15 @@
   </section>
   </div>
   <script src="menuLateral.js"></script>
+  <script>
+    const venda_a_prazo = async () =>{
+    const url = new URL("http://localhost:3000/venda-a-prazo")
+    let result = await fetch(url)
+    result = await result.json()
+    console.log(result)
+}
+venda_a_prazo(); 
+  </script>
 </body>
 
 </html>

@@ -143,6 +143,15 @@
   </section>
   </div>
   <script src="menuLateral.js"></script>
+  <script>
+    const funcionarios = async () =>{
+    const url = new URL("http://localhost:3000/funcionarios")
+    let result = await fetch(url)
+    result = await result.json()
+    console.log(result)
+}
+  funcionarios(); 
+  </script>
 </body>
 
 </html>
