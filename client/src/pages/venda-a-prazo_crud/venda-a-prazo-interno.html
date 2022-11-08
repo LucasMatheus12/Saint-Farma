@@ -179,7 +179,16 @@
   </div>
   </section>
   </div>
-  <script type="module" src="src/main.js"></script>
+  <script src="/client/src/pages/menuLateral.js"></script>
+  <script>
+    const venda_prazo_editar_interno = async () =>{
+    const url = new URL("http://localhost:3000/venda-a-prazo/editar-interno")
+    let result = await fetch(url)
+    result = await result.json()
+    console.log(result)
+}
+    venda_prazo_editar_interno(); 
+  </script>
 </body>
 
 </html>

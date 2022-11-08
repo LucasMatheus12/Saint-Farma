@@ -154,7 +154,16 @@
   </div>
   </section>
   </div>
-  <script src="/client/src/menuLateral.js"></script>
+  <script src="/client/src/pages/menuLateral.js"></script>
+  <script>
+    const cliente_editar = async () =>{
+    const url = new URL("http://localhost:3000/cliente/buscar")
+    let result = await fetch(url)
+    result = await result.json()
+    console.log(result)
+}
+  cliente_editar(); 
+  </script>
 </body>
 
 </html>
