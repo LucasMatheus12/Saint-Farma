@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saint Farma</title>
+    <!--Fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <!--Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/d34cd396d1.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar nav-azul">
+        
+             <div class="container-fluid">
+             <a id="logo" class="navbar-brand" href="">
+                <span><strong>Saint Farma</strong></span>
+             </a>
+             
+             <div id="log-administrador">
+              <a id="link-administrador" href="administrador-login.html"><i class="fa-solid fa-user icone-administrador"></i> Administrador</a>
+            </div>
+            </div>
+
+         
+      </nav>
+    </header>
+    
+    
+   
+    <div class="wrapper">
+      <nav id="sidebar">
+      
+      
+          <button class="menu"><i class="fas fa-align-left icone-menu"></i>Menu</button>
+      
+      
+        <ul class="list-unstyled" id="navegacao">
+      
+          <li class="estoque">
+            <i class="fa-solid fa-box"></i>
+             <a href="estoque.html">Estoque</a>
+          </li>
+          <li class="clientes ">
+            <i class="fa-solid fa-user-group"></i>
+            <a href="cliente.html">Cliente</a>
+          </li>
+          <li class="venda ">
+            <i class="fa-sharp fa-solid fa-bag-shopping"></i>
+            <a href="venda.html">Venda</a>
+          </li>
+          <li class="venda-a-prazo active">
+            <i class="fa-regular fa-credit-card"></i>
+            <a href="venda-a-prazo.html">Venda a Prazo</a>
+          </li>
+      
+        </ul>
+      </nav>
+      
+      <!--seção principal-->
+      <section id="conteudo-principal">
+        <div class="container">
+        <div class="row">
+         <div class="col-8">
+            <ul id="menu-interno">
+              <li><a href="venda-a-prazo.html">Cadastrar</a></li>
+              <li><a  href="venda-a-prazo-editar.html">Editar</a></li>
+              <li><a href="venda-a-prazo-buscar.html">Buscar</a></li>
+              <li><a class="active" href="venda-a-prazo-deletar.html">Deletar</a></li>
+            </ul>
+           </div>
+          </div>
+        </div>
+      
+      
+               <div class="container">
+                <div class="row">
+                <div class="col-2 controle-formulario">
+                  <label for="Data-venda-prazo-compra">Data da compra</label>
+                  <input type="text" class="mediano" name="data-venda-prazo-compra" id="Data-venda-prazo-compra" >
+                </div>
+                <div class="col-2 controle-formulario">
+                    <label for="Data-venda-a-prazo">Data a Pagar</label>
+                    <input type="text" class="mediano" name="data-venda" id="Data-venda-a-prazo" >
+                  </div>
+                  <div class="col-2 controle-formulario">
+                    <label for="Parcelas-venda-a-prazo">Parcelas</label>
+                    <input type="text" class="mediano" name="data-venda" id="Parcelas-venda-a-prazo" >
+                  </div>
+                  <div class="col-4 controle-formulario">
+                    <!-- <label for="Pagamento-venda">Forma de Pagamento</label>
+                          <input type="text" class="maior" name="pagamento-venda" id="Pagamento-venda" placeholder="Selecione a forma de pagamento" > -->
+                    <details>
+                      <summary>Forma de pagamento</summary>
+                      <input class="alinhamento-botao" type="radio" id="cartao" name="fav_pagamento" value="1">
+                        <label class="alinhamento" for="cartao">Cartão</label>
+                      <input class="alinhamento-botao"  type="radio" id="cartao" name="fav_pagamento" value="2">
+                        <label class="alinhamento" for="cartao">Pix</label>
+                      <input class="alinhamento-botao"  type="radio" id="cartao" name="fav_pagamento" value="3">
+                        <label class="alinhamento" for="cartao">Dinheiro</label>
+                    </details>
+                  </div>
+                <div class="col-2 controle-formulario">
+                    <label for="Valor-venda-a-prazo">Valor a pagar</label>
+                    <input type="text" class="mediano" name="valor-venda" id="Valor-venda-a-prazo" placeholder="R$">
+                  </div>
+                <div class="col-4 controle-formulario">
+                  <label for="CPF-venda-a-prazo">CPF do Cliente</label>
+                  <input type="text" class="maior" name="cpf-venda" id="CPF-venda-a-prazo" placeholder="CPF do cliente da venda">
+                </div>
+                <div class="col-4 controle-formulario">
+                  <label for="Funcionario-venda-a-prazo">Nome do Funcionário</label>
+                  <input type="text" class="maior" name="funcionario-venda" id="Funcionario-venda-a-prazo" placeholder="Funcionario da Venda">
+                </div>
+                <div class="col-4">
+                  <button type="submit" class="botao-formulario"><i class="fa-solid fa-magnifying-glass"></i> Buscar</button>
+                </div>
+                
+                <div class="col">
+                  <table class="table">
+                      <thead>
+                        <tr class="tr">
+                          <th class="th col-2">Cod. Produto</th>
+                          <th class="th col-2">Produto</th>
+                          <th class="th col-2">Quantidade</th>
+                          <th class="th col-2">Data da Compra</th>
+                          <th class="th col-2">Data a Pagar</th>
+                          <th class="th col-2">Forma de Pagamento</th>
+                          <th class="th col-2">Valor a Pagar</th>
+                          <th class="th col-2">Parcelas</th>
+                        </tr>
+                    </thead>
+      
+                    <tbody id="lista-contatos">
+                         <tr>
+                          <td>1</td>
+                          <td>Equipamento</td>
+                          <td>2</td>
+                          <td>27/10/2022</td>
+                          <td>27/11/2022</td>
+                          <td>Pix</td>
+                          <td>100 R$</td>
+                          <td>3</td>
+                          <td>botão deletar</td>
+                         </tr>
+                    </tbody>
+      
+                    </table>
+                </div>
+
+                </div>
+                </div>
+      
+        </div>
+       </section>
+    </div>
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
