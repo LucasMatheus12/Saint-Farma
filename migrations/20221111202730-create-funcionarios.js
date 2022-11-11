@@ -1,20 +1,29 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Clientes', {
+    return queryInterface.createTable('Funcionarios', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      nomes: {
+      nome: {
         type: Sequelize.STRING
+      },
+      salario: {
+        type: Sequelize.FLOAT
+      },
+      telefone: {
+        type: Sequelize.INTEGER
       },
       cpf: {
         type: Sequelize.STRING
       },
-      telefone: {
+      cidade: {
+        type: Sequelize.STRING
+      },
+      referencia: {
         type: Sequelize.STRING
       },
       rua: {
@@ -23,14 +32,8 @@ module.exports = {
       bairro: {
         type: Sequelize.STRING
       },
-      numeroCasa: {
+      numerocasa: {
         type: Sequelize.INTEGER
-      },
-      cidade: {
-        type: Sequelize.STRING
-      },
-      referencia: {
-        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,
@@ -43,6 +46,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Clientes');
+    return queryInterface.dropTable('Funcionarios');
   }
 };
