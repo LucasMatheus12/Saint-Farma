@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saint Farma</title>
+    <!--Fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <!--Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/d34cd396d1.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar nav-azul">
+        
+             <div class="container-fluid">
+             <a id="logo" class="navbar-brand" href="">
+                <span><strong>Saint Farma</strong></span>
+             </a>
+             
+             <div id="log-administrador">
+              <a id="link-administrador" href="administrador-login.html"><i class="fa-solid fa-user icone-administrador"></i> Administrador</a>
+            </div>
+            </div>
+
+         
+      </nav>
+    </header>
+    
+    
+   <div class="wrapper">
+    <nav id="sidebar">
+       
+      
+        <button class="menu"><i class="fas fa-align-left icone-menu"></i>Menu</button>
+      
+       
+      <ul class="list-unstyled" id="navegacao">
+        
+        <li class="estoque">
+          <i class="fa-solid fa-box"></i>
+           <a href="estoque.html">Estoque</a>
+        </li>
+
+        <li class="clientes active">
+          <i class="fa-solid fa-user-group"></i>
+          <a href="cliente.html">Cliente</a>
+        </li>
+
+        <li class="venda">
+          <i class="fa-sharp fa-solid fa-bag-shopping"></i>
+          <a href="venda.html">Venda</a>
+        </li>
+
+        <li class="venda-a-prazo">
+          <i class="fa-regular fa-credit-card"></i>
+          <a href="venda-a-prazo.html">Venda a Prazo</a>
+        </li>
+        
+      </ul>
+    </nav>
+    
+    <!--seção principal--> 
+    <section id="conteudo-principal">
+      <div class="container">
+      <div class="row">
+       <div class="col-8">
+          <ul id="menu-interno">
+            <li><a class="active" href="cliente.html">Cadastrar</a></li>
+            <li><a href="cliente-editar.html">Editar</a></li>
+            <li><a href="cliente-buscar.html">Buscar</a></li>
+            <li><a href="cliente-deletar.html">Deletar</a></li>
+          </ul>
+         </div>
+        </div>
+      </div>
+        
+        
+             <div class="container">
+              <div class="row">
+              <div class="col-12 controle-formulario">
+              <label for="Nome-cliente">Nome</label>
+              <input type="text" class="maior" name="nome-cliente" id="Nome-cliente" placeholder="Digite o nome do cliente..">
+               </div>
+
+              <div class="col-4 controle-formulario">
+                <label for="Telefone-cliente">Telefone</label>
+                <input type="text" class="maior" name="telefone-cliente" id="Telefone-cliente" placeholder="Digite o telefone do cliente..">
+              </div>
+
+              <div class="col-8 controle-formulario">
+                <label for="CPF-cliente">CPF</label>
+                <input type="text" class="maior" name="cpf-cliente" id="CPF-cliente" placeholder="Digite o CPF do cliente..">
+              </div>
+             
+              <div class="col-12 titulo-cadastro">
+                   <span id="titulo-cadastro-cliente">Endereço</span>
+              </div>
+
+
+              <div class="col-3 controle-formulario">
+                <label for="Cidade-cliente">Cidade</label>
+                <input type="text" name="cidade-cliente" id="Cidade-cliente" placeholder="Digite a cidade" >
+              </div>
+
+              <div class="col-9 controle-formulario">
+                <label for="Referencia-cliente">Referência</label>
+                <input type="text" class="maior" name="referencia-cliente" id="Referencia-cliente" placeholder="Digite algum ponto de referência">
+              </div>
+
+              <div class="col-4 controle-formulario">
+                <label for="Rua-cliente">Rua</label>
+                <input type="text" class="maior" name="rua-cliente" id="Rua-cliente" placeholder="Digite a Rua em que mora">
+              </div>
+
+              <div class="col-3 controle-formulario">
+                <label for="Bairro-cliente">Bairro</label>
+                <input type="text" name="bairro-cliente" id="Bairro-cliente" placeholder="Digite o Bairro em que mora">
+              </div>
+              
+              <div class="col-3 controle-formulario">
+                <label for="Numero-cliente">N°</label>
+                <input type="text" name="numero-cliente" id="Numero-cliente" placeholder="Digite o número da casa">
+              </div>
+
+              <div class="col-2">
+                <button type="submit" class="botao-formulario"><i class="fa-regular fa-circle-check"></i> Cadastrar</button>
+              </div>
+
+              </div>
+              </div>
+        
+
+      </div>
+     </section>
+    </div>
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
