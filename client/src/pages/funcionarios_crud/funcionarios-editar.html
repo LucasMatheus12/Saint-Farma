@@ -19,7 +19,7 @@
   <script src="https://kit.fontawesome.com/d34cd396d1.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body onload="visualizarListaFuncionario()">
   <header>
     <nav class="navbar nav-azul">
 
@@ -117,18 +117,8 @@
                 </tr>
               </thead>
 
-              <tbody id="lista-contatos">
-                <tr>
-                  <td>Alisson</td>
-                  <td>(84)98121-8891</td>
-                  <td>131.202.552-32</td>
-                  <td>Pau dos Ferros</td>
-                  <td>Rua dos coqueiros</td>
-                  <td>Manel</td>
-                  <td>2.500 R$</td>
-                  <td>botão editar</td>
-                </tr>
-
+              <tbody id="listaFuncionarios">
+                
               </tbody>
 
             </table>
@@ -140,15 +130,7 @@
   </section>
   </div>
   <script src="/client/src/pages/menuLateral.js"></script>
-  <script>
-    const funcionario_editar = async () =>{
-    const url = new URL("http://localhost:3000/funcionarios/editar")
-    let result = await fetch(url)
-    result = await result.json()
-    console.log(result)
-}
-  funcionario_editar(); 
-  </script>
+  <script src="../back-funcionario.js"></script>
 </body>
 
 </html>

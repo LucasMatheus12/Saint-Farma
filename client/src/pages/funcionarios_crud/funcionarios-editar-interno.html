@@ -143,15 +143,7 @@
   </section>
   </div>
   <script src="/client/src/pages/menuLateral.js""></script>
-  <script>
-    const funcionario_editar_interno = async () =>{
-    const url = new URL("http://localhost:3000/funcionarios/editar-interno")
-    let result = await fetch(url)
-    result = await result.json()
-    console.log(result)
-}
-  funcionario_editar_interno(); 
-  </script>
+  <script src="../back-funcionario.js"></script>
 </body>
 
 </html>
