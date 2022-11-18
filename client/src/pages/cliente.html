@@ -8,7 +8,9 @@
   <!--Fontes-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
+  <link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Poppins:wght@400;500;600;700;900&display=swap"
+  rel="stylesheet">
   <link rel="stylesheet" href="/client/css/index.css">
   <!--Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -86,19 +88,19 @@
         <div class="row">
           <div class="col-12 controle-formulario">
             <label for="Nome-cliente">Nome</label>
-            <input type="text" class="maior" name="nome-cliente" id="Nome-cliente"
+            <input type="text" class="maior" name="nome-cliente" id="Nomecliente"
               placeholder="Digite o nome do cliente..">
           </div>
 
           <div class="col-4 controle-formulario">
             <label for="Telefone-cliente">Telefone</label>
-            <input type="text" class="maior" name="telefone-cliente" id="Telefone-cliente"
+            <input type="text" class="maior" name="telefone-cliente" id="Telefonecliente"
               placeholder="Digite o telefone do cliente..">
           </div>
 
           <div class="col-8 controle-formulario">
             <label for="CPF-cliente">CPF</label>
-            <input type="text" class="maior" name="cpf-cliente" id="CPF-cliente"
+            <input type="text" class="maior" name="cpf-cliente" id="CPFcliente"
               placeholder="Digite o CPF do cliente..">
           </div>
 
@@ -109,32 +111,32 @@
 
           <div class="col-3 controle-formulario">
             <label for="Cidade-cliente">Cidade</label>
-            <input type="text" name="cidade-cliente" id="Cidade-cliente" placeholder="Digite a cidade">
+            <input type="text" name="cidade-cliente" id="Cidadecliente" placeholder="Digite a cidade">
           </div>
 
           <div class="col-9 controle-formulario">
             <label for="Referencia-cliente">Referência</label>
-            <input type="text" class="maior" name="referencia-cliente" id="Referencia-cliente"
+            <input type="text" class="maior" name="referencia-cliente" id="Referenciacliente"
               placeholder="Digite algum ponto de referência">
           </div>
 
           <div class="col-4 controle-formulario">
             <label for="Rua-cliente">Rua</label>
-            <input type="text" class="maior" name="rua-cliente" id="Rua-cliente" placeholder="Digite a Rua em que mora">
+            <input type="text" class="maior" name="rua-cliente" id="Ruacliente" placeholder="Digite a Rua em que mora">
           </div>
 
           <div class="col-3 controle-formulario">
             <label for="Bairro-cliente">Bairro</label>
-            <input type="text" name="bairro-cliente" id="Bairro-cliente" placeholder="Digite o Bairro em que mora">
+            <input type="text" name="bairro-cliente" id="Bairrocliente" placeholder="Digite o Bairro em que mora">
           </div>
 
           <div class="col-3 controle-formulario">
             <label for="Numero-cliente">N°</label>
-            <input type="text" name="numero-cliente" id="Numero-cliente" placeholder="Digite o número da casa">
+            <input type="text" name="numero-cliente" id="Numerocliente" placeholder="Digite o número da casa">
           </div>
 
           <div class="col-2">
-            <button type="submit" class="botao-formulario"><i class="fa-regular fa-circle-check"></i> Cadastrar</button>
+            <button type="submit" class="botao-formulario" onclick="CadastrarCliente()"><i class="fa-regular fa-circle-check"></i> Cadastrar</button>
           </div>
 
         </div>
@@ -145,15 +147,7 @@
   </section>
   </div>
   <script src="menuLateral.js"></script>
-  <script>
-    const cliente = async () =>{
-    const url = new URL("http://localhost:3000/cliente")
-    let result = await fetch(url)
-    result = await result.json()
-    console.log(result)
-    }
-    cliente(); 
-  </script>
+  <script src="back-cliente.js"></script>
 </body>
 
 </html>
