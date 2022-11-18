@@ -77,24 +77,24 @@
         <div class="row">
           <div class="col-4 controle-formulario">
             <label for="Nome-funcionario">Nome</label>
-            <input type="text" class="maior" name="nome-funcionario" id="Nome-funcionario"
+            <input type="text" class="maior" name="nome-funcionario" id="Nomefuncionario"
               placeholder="Digite o nome do funcionário..">
           </div>
 
           <div class="col-8 controle-formulario">
             <label for="Salario-funcionario">Salário</label>
-            <input type="text" class="mediano" name="salario-funcionario" id="Salario-funcionario" placeholder="R$">
+            <input type="text" class="mediano" name="salario-funcionario" id="Salariofuncionario" placeholder="R$">
           </div>
 
           <div class="col-4 controle-formulario">
             <label for="Telefone-funcionario">Telefone</label>
-            <input type="text" class="maior" name="telefone-funcionario" id="Telefone-funcionario"
+            <input type="text" class="maior" name="telefone-funcionario" id="Telefonefuncionario"
               placeholder="Digite o telefone do funcionário..">
           </div>
 
           <div class="col-8 controle-formulario">
             <label for="CPF-funcionario">CPF</label>
-            <input type="text" class="maior" name="cpf-funcionario" id="CPF-funcionario"
+            <input type="text" class="maior" name="cpf-funcionario" id="CPFfuncionario"
               placeholder="Digite o CPF do funcionário..">
           </div>
 
@@ -105,34 +105,34 @@
 
           <div class="col-3 controle-formulario">
             <label for="Cidade-funcionario">Cidade</label>
-            <input type="text" name="cidade-funcionario" id="Cidade-funcionario" placeholder="Digite a cidade">
+            <input type="text" name="cidade-funcionario" id="Cidadefuncionario" placeholder="Digite a cidade">
           </div>
 
           <div class="col-9 controle-formulario">
             <label for="Referencia-funcionario">Referência</label>
-            <input type="text" class="maior" name="referencia-funcionario" id="Referencia-funcionario"
+            <input type="text" class="maior" name="referencia-funcionario" id="Referenciafuncionario"
               placeholder="Digite algum ponto de referência">
           </div>
 
           <div class="col-4 controle-formulario">
             <label for="Rua-funcionario">Rua</label>
-            <input type="text" class="maior" name="rua-funcionario" id="Rua-funcionario"
+            <input type="text" class="maior" name="rua-funcionario" id="Ruafuncionario"
               placeholder="Digite a Rua em que mora">
           </div>
 
           <div class="col-3 controle-formulario">
             <label for="Bairro-funcionario">Bairro</label>
-            <input type="text" name="bairro-funcionario" id="Bairro-funcionario"
+            <input type="text" name="bairro-funcionario" id="Bairrofuncionario"
               placeholder="Digite o Bairro em que mora">
           </div>
 
           <div class="col-3 controle-formulario">
             <label for="Numero-funcionario">N°</label>
-            <input type="text" name="numero-funcionario" id="Numero-funcionario" placeholder="Digite o número da casa">
+            <input type="text" name="numero-funcionario" id="Numerofuncionario" placeholder="Digite o número da casa">
           </div>
 
           <div class="col-2">
-            <button type="submit" class="botao-formulario"><i class="fa-regular fa-circle-check"></i> Cadastrar</button>
+            <button type="submit" class="botao-formulario" onclick="CadastrarFuncionario()"><i class="fa-regular fa-circle-check"></i> Cadastrar</button>
           </div>
 
         </div>
@@ -143,15 +143,7 @@
   </section>
   </div>
   <script src="menuLateral.js"></script>
-  <script>
-    const funcionarios = async () =>{
-    const url = new URL("http://localhost:3000/funcionarios")
-    let result = await fetch(url)
-    result = await result.json()
-    console.log(result)
-}
-  funcionarios(); 
-  </script>
+  <script src="back-funcionario.js"></script>
 </body>
 
 </html>
