@@ -50,7 +50,7 @@ class BancoDados {
     }
 
     listarRegistrofuncionario() {
-        console.log("a");
+        
         let funcionarios = Array();
         let id = localStorage.getItem('idFuncionario');
         let idreplace = id.replace('funcionario', '');
@@ -85,9 +85,10 @@ class BancoDados {
         if (funcionario.cpf != '') {
             FuncionarioBuscar = FuncionarioBuscar.filter(b => b.cpf == funcionario.cpf)
         }
-        return this.Buscarfuncionario;
+        return FuncionarioBuscar;
     }
 }
+
 let BD = new BancoDados();
 
 function CadastrarFuncionario() {
@@ -115,42 +116,42 @@ function visualizarListaFuncionario(funcionario = Array(), filtro = false, edita
     listaFuncionario.innerHTML = ''
 
     funcionario.forEach(function (d) {
+        //criando a linha(tr)
         let linha = listaFuncionario.insertRow()
-
+        console.log(d)
+        // criar as colunas(td)
         linha.insertCell(0).innerHTML = d.nome
-        linha.insertCell(1).innerHTML = d.salario
-        linha.insertCell(2).innerHTML = d.telefone
-        linha.insertCell(3).innerHTML = d.cpf
-        linha.insertCell(4).innerHTML = d.cidade
-        linha.insertCell(5).innerHTML = d.rua
-        linha.insertCell(6).innerHTML = d.bairro
-        linha.insertCell(7).innerHTML = d.numerocasa
-
+        linha.insertCell(1).innerHTML = d.telefone
+        linha.insertCell(2).innerHTML = d.cpf
+        linha.insertCell(3).innerHTML = d.cidade
+        linha.insertCell(4).innerHTML = d.rua
+        linha.insertCell(5).innerHTML = d.bairro
+        linha.insertCell(6).innerHTML = d.salario
         if (editar == true) {
-            let btn = document.createElement('button')
-            btn.className = 'btn btn-primary'
-            btn.innerHTML = '<i class="fa-solid fa-pen"></i>'
-            btn.id = `id_editar_${d.id}`
-            btn.onclick = function () {
-                let id = this.id.replace('id_editar_', '')
-                let funcionario = JSON.parse(localStorage.getItem(id + 'funcionario'))
-                BD.GravarFuncionarioEditar(id, funcionario)
-                location.href = 'funcionario-editar-interno.html'
-            }
-            linha.insertCell(8).append(btn)
+          let btn = document.createElement('button')
+          btn.className = 'btn btn-primary'
+          btn.innerHTML = '<i class="fa-solid fa-pen"></i>'
+          btn.id = `id_editar_${d.id}`
+          btn.onclick = function () {
+            let id = this.id.replace('id_editar_', '')
+            let funcionario = JSON.parse(localStorage.getItem(id + 'funcionario'))
+            BD.GravarFuncionarioEditar(id, funcionario)
+            location.href = 'funcionarios-editar-interno.html'
+          }
+          linha.insertCell(7).append(btn)
         } else if (excluir == true) {
-            let btn = document.createElement('button')
-            btn.className = 'btn btn-danger'
-            btn.innerHTML = '<i class="fas fa-times"></i>'
-            btn.id = `id_deletar_${d.id}`
-            btn.onclick = function () {
-                ModificaEstilo3()
-                $('#modalConsulta').modal('show')
-                let id = this.id.replace('id_deletar_', '')
-            }
-            linha.insertCell(8).append(btn)
+          let btn = document.createElement('button')
+          btn.className = 'btn btn-danger'
+          btn.innerHTML = '<i class="fas fa-times"></i>'
+          btn.id = `id_deletar_${d.id}`
+          btn.onclick = function () {
+            ModificaEstilo3()
+            $('#modalConsulta').modal('show')
+            let id = this.id.replace('id_deletar_', '')
+          }
+          linha.insertCell(7).append(btn)
         }
-    })
+      })
 }
 
 function Pesquisarfuncionario() {
@@ -163,6 +164,7 @@ function Pesquisarfuncionario() {
 
     let FuncionarioPesquisado = BD.Buscarfuncionario(funcionario);
     visualizarListaFuncionario(FuncionarioPesquisado, true);
+    
 }
 
 function PesquisarfuncionarioExcluir() {
@@ -191,6 +193,38 @@ function PesquisarfuncionarioEditar() {
 
 }
 
+function preencherEditar() {
+    let funcionario = Array()
+    funcionario = BD.RecuperarFuncionarioEditar()
+    funcionario.forEach(function (e) {
+      document.getElementById('NomefuncionarioEditar').value = e.nome
+      document.getElementById('SalariofuncionarioEditar').value = e.salario
+      document.getElementById('TelefonefuncionarioEditar').value = e.telefone
+      document.getElementById('CPFfuncionarioEditar').value = e.cpf
+      document.getElementById('CidadefuncionarioEditar').value = e.cidade
+      document.getElementById('ReferenciafuncionarioEditar').value = e.referencia
+      document.getElementById('RuafuncionarioEditar').value = e.rua
+      document.getElementById('BairrofuncionarioEditar').value = e.bairro
+      document.getElementById('NumeroCasafuncionarioEditar').value = e.numeroCasa
+    })
+  
+  }
+  
+  function CadastrarEditado() {
+    let nome = document.getElementById('NomefuncionarioEditar')
+    let salario = document.getElementById('SalariofuncionarioEditar')
+    let telefone = document.getElementById('TelefonefuncionarioEditar')
+    let cpf = document.getElementById('CPFfuncionarioEditar')
+    let cidade = document.getElementById('CidadefuncionarioEditar')
+    let referencia = document.getElementById('ReferenciafuncionarioEditar')
+    let rua = document.getElementById('RuafuncionarioEditar')
+    let bairro = document.getElementById('BairrofuncionarioEditar')
+    let numerocasa = document.getElementById('NumeroCasafuncionarioEditar')
+  
+    let funcionario = new Funcionario(nome.value,salario.value,telefone.value,cpf.value,cidade.value,referencia.value,rua.value,bairro.value,numerocasa.value)
+    BD.RetornaRegistro(funcionario)
+    location.href = 'funcionarios-editar.html'
+  } 
 
 
 
