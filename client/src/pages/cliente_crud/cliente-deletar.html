@@ -19,7 +19,7 @@
   <script src="https://kit.fontawesome.com/d34cd396d1.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body onload="carregaListaCliente()">
   <header>
     <nav class="navbar nav-azul">
 
@@ -89,22 +89,22 @@
       <div class="container">
         <div class="row">
           <div class="col-12 controle-formulario">
-            <label for="Codigo-prod">Nome</label>
-            <input type="text" class="maior" name="codigo-produto" id="Codigo-prod"
+            <label for="NomeCliente">Nome</label>
+            <input type="text" class="maior" name="nomecliente" id="NomeCliente"
               placeholder="Digite o nome do cliente..">
           </div>
           <div class="col-4 controle-formulario">
-            <label for="Nome-prod">Telefone</label>
-            <input type="text" class="maior" name="nome" id="Nome-prod" placeholder="Digite o telefone do cliente..">
+            <label for="TelefoneCliente">Telefone</label>
+            <input type="text" class="maior" name="telefonecliente" id="TelefoneCliente" placeholder="Digite o telefone do cliente..">
           </div>
           <div class="col-4 controle-formulario">
-            <label for="Desc-prod">CPF</label>
-            <input type="text" class="maior" name="descricao-produto" id="Desc-prod"
+            <label for="CPFCliente">CPF</label>
+            <input type="text" class="maior" name="cpfcliente" id="CPFCliente"
               placeholder="Digite o CPF do cliente..">
           </div>
 
           <div class="col-4">
-            <button type="submit" class="botao-formulario"><i class="fa-solid fa-magnifying-glass"></i> Buscar</button>
+            <button type="submit" class="botao-formulario" onclick="PesquisarClienteExcluir()"><i class="fa-solid fa-magnifying-glass"></i> Buscar</button>
           </div>
           <div class="col">
             <table class="table">
@@ -120,18 +120,8 @@
                 </tr>
               </thead>
 
-              <tbody id="lista-contatos">
-                <tr>
-                  <td>Alisson</td>
-                  <td>(84)98121-8891</td>
-                  <td>131.202.552-32</td>
-                  <td>Pau dos Ferros</td>
-                  <td>Rua dos coqueiros</td>
-                  <td>Manel</td>
-                  <td>83</td>
-                  <td>botão deletar</td>
-                </tr>
-
+              <tbody id="listaCliente">
+                
               </tbody>
 
             </table>
@@ -142,17 +132,8 @@
   </div>
   </section>
   </div>
-  <script src="/client/src/menuLateral.js"></script>
-  <script>
-    const cliente_deletar = async () =>{
-    const url = new URL("http://localhost:3000/cliente/deletar")
-    let result = await fetch(url)
-    result = await result.json()
-    console.log(result)
-}
-  
-cliente_deletar(); 
-  </script>
+  <script src="/client/src/pages/menuLateral.js"></script>
+  <script src="/client//src/pages/back-cliente.js"></script>
 </body>
 
 </html>

@@ -19,7 +19,7 @@
   <script src="https://kit.fontawesome.com/d34cd396d1.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body onload="carregaListaEstoque()">
   <header>
     <nav class="navbar nav-azul">
 
@@ -90,45 +90,45 @@
         <div class="row">
           <div class="col-2 controle-formulario">
             <label for="Codigo-prod">Cod. Produto</label>
-            <input type="text" class="menor" name="codigo-produto" id="Codigo-prod" placeholder="Código">
+            <input type="text" class="menor" name="codigo-produto" id="Codigoprod" placeholder="Código">
           </div>
 
           <div class="col-4 controle-formulario">
             <label for="Nome-prod">Nome</label>
-            <input type="text" class="maior" name="nome" id="Nome-prod" placeholder="Digite o nome do produto">
+            <input type="text" class="maior" name="nome" id="Nomeprod" placeholder="Digite o nome do produto">
           </div>
 
           <div class="col-6 controle-formulario">
             <label for="Desc-prod">Descrição</label>
-            <input type="text" class="maior" name="descricao-produto" id="Desc-prod" placeholder="Digite a descrição">
+            <input type="text" class="maior" name="descricao-produto" id="Descprod" placeholder="Digite a descrição">
           </div>
 
           <div class="col-2 controle-formulario">
             <label for="Custo-prod">Preço de Custo</label>
-            <input type="text" class="mediano" name="custo-produto" id="Custo-prod" placeholder="R$">
+            <input type="text" class="mediano" name="custo-produto" id="Custoprod" placeholder="R$">
           </div>
 
           <div class="col-3 controle-formulario">
             <label for="Venda-prod">Preço de Venda</label>
-            <input type="text" class="mediano" name="venda-produto" id="Venda-prod" placeholder="R$">
+            <input type="text" class="mediano" name="venda-produto" id="Vendaprod" placeholder="R$">
           </div>
 
           <div class="col-3 controle-formulario">
             <label for="Quant-prod">Quantidade</label>
-            <input type="text" name="quantidade-produto" id="Quant-prod" placeholder="Digite a Quantidade">
+            <input type="text" name="quantidade-produto" id="Quantprod" placeholder="Digite a Quantidade">
           </div>
 
           <div class="col-4 controle-formulario">
             <label for="Data-prod">Data da Compra</label>
-            <input type="text" class="mediano" name="data-produto" id="Data-prod" placeholder="Digite a Data">
+            <input type="text" class="mediano" name="data-produto" id="Dataprod" placeholder="Digite a Data">
           </div>
 
           <div class="col-3 controle-formulario">
             <label for="Val-prod">Validade</label>
-            <input type="text" class="mediano" name="validade-produto" id="Val-prod" placeholder="Digite a validade">
+            <input type="text" class="mediano" name="validade-produto" id="Valprod" placeholder="Digite a validade">
           </div>
           <div class="col-9">
-            <button type="submit" class="botao-formulario"><i class="fa-solid fa-magnifying-glass"></i> Buscar</button>
+            <button type="submit" class="botao-formulario" onclick="PesquisarEstoqueExcluir()"><i class="fa-solid fa-magnifying-glass"></i> Buscar</button>
           </div>
 
           <div class="col">
@@ -144,7 +144,7 @@
                 </tr>
               </thead>
 
-              <tbody id="lista-contatos">
+              <tbody id="listaEstoque">
                 <tr>
                   <td>1</td>
                   <td>Equipamento</td>
@@ -164,16 +164,8 @@
   </div>
   </section>
   </div>
-  <script src="/client/src/menuLateral.js"></script>
-  <script>
-    const estoque_deletar = async () =>{
-    const url = new URL("http://localhost:3000/estoque/deletar")
-    let result = await fetch(url)
-    result = await result.json()
-    console.log(result)
-}
-  estoque_deletar(); 
-  </script>
+  <script src="/client/src/pages/menuLateral.js"></script>
+  <script src="/client/src/pages/back-estoque.js"></script>
 </body>
 
 </html>
