@@ -19,7 +19,7 @@
   <script src="https://kit.fontawesome.com/d34cd396d1.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body onload="carregaListaVenda()">
   <header>
     <nav class="navbar nav-azul">
 
@@ -90,48 +90,46 @@
         <div class="row">
           <div class="col-2 controle-formulario">
             <label for="Quantidade-venda">Quantidade</label>
-            <input type="text" class="mediano" name="quantidade-venda" id="Quantidade-venda" placeholder="Quantidade">
+            <input type="text" class="mediano" name="quantidade-venda" id="Quantidadevenda" placeholder="Quantidade">
           </div>
           <div class="col-10 controle-formulario">
             <label for="Codigo-produto-venda">Cod. Produto</label>
-            <input type="text" class="menor" name="codigo-produto-venda" id="Codigo-produto-venda" placeholder="Código">
+            <input type="text" class="menor" name="codigo-produto-venda" id="Codigoprodutovenda" placeholder="Código">
           </div>
           <div class="col-2 controle-formulario">
             <label for="Valor-venda">Valor a pagar</label>
-            <input type="text" class="mediano" name="valor-venda" id="Valor-venda" placeholder="R$">
+            <input type="text" class="mediano" name="valor-venda" id="Valorvenda" placeholder="R$">
           </div>
           <div class="col-3 controle-formulario">
             <label for="Data-venda">Data da compra</label>
-            <input type="text" class="mediano" name="data-venda" id="Data-venda">
+            <input type="text" class="mediano" name="data-venda" id="Datavenda">
           </div>
           <div class="col-4 controle-formulario">
-            <!-- <label for="Pagamento-venda">Forma de Pagamento</label>
-                  <input type="text" class="maior" name="pagamento-venda" id="Pagamento-venda" placeholder="Selecione a forma de pagamento" > -->
             <details>
               <summary>Forma de pagamento</summary>
-              <input class="alinhamento-botao" type="radio" id="cartao" name="fav_pagamento" value="1">
-                <label class="alinhamento" for="cartao">Cartão</label>
-              <input class="alinhamento-botao" type="radio" id="cartao" name="fav_pagamento" value="2">
-                <label class="alinhamento" for="cartao">Pix</label>
-              <input class="alinhamento-botao" type="radio" id="cartao" name="fav_pagamento" value="3">
-                <label class="alinhamento" for="cartao">Dinheiro</label>
+              <select class="form-control" id="tipopagamento">
+                <option value="">Escolha a Forma de Pagamento:</option>
+                <option value="1">Cartão</option>
+                <option value="2">Pix</option>
+                <option value="3">Dinheiro</option>
+              </select>
             </details>
           </div>
           <div class="col-3 controle-formulario">
             <label for="Desconto-venda">Desconto</label>
-            <input type="text" name="desconto-venda" id="Desconto-venda" placeholder="Digite o valor do desconto">
+            <input type="text" name="desconto-venda" id="Descontovenda" placeholder="Digite o valor do desconto">
           </div>
           <div class="col-4 controle-formulario">
             <label for="CPF-venda">CPF do Cliente</label>
-            <input type="text" class="maior" name="cpf-venda" id="CPF-venda" placeholder="CPF do cliente da venda">
+            <input type="text" class="maior" name="cpf-venda" id="CPFvenda" placeholder="CPF do cliente da venda">
           </div>
           <div class="col-4 controle-formulario">
             <label for="Funcionario-venda">Nome do Funcionário</label>
-            <input type="text" class="maior" name="funcionario-venda" id="Funcionario-venda"
+            <input type="text" class="maior" name="funcionario-venda" id="Funcionariovenda"
               placeholder="Funcionario da Venda">
           </div>
           <div class="col-4">
-            <button type="submit" class="botao-formulario"><i class="fa-regular fa-circle-check"></i> Cadastrar
+            <button type="submit" class="botao-formulario" onclick="CadastrarVenda()"><i class="fa-regular fa-circle-check"></i> Cadastrar
               Venda</button>
           </div>
 
@@ -140,7 +138,6 @@
               <thead>
                 <tr class="tr">
                   <th class="th col-2">Cod. Produto</th>
-                  <th class="th col-2">Produto</th>
                   <th class="th col-2">Quantidade</th>
                   <th class="th col-2">Data da Compra</th>
                   <th class="th col-2">Forma de Pagamento</th>
@@ -149,16 +146,8 @@
                 </tr>
               </thead>
 
-              <tbody id="lista-contatos">
-                <tr>
-                  <td>3</td>
-                  <td>Bandeite</td>
-                  <td>3</td>
-                  <td>27/10/2022</td>
-                  <td>Dinheiro</td>
-                  <td>500 R$</td>
-                  <td>10%</td>
-                </tr>
+              <tbody id="listaVenda">
+                
               </tbody>
 
             </table>
@@ -171,7 +160,7 @@
   </section>
   </div>
   <script src="menuLateral.js"></script>
-  <script src="back.js"></script>
+  <script src="back-venda.js"></script>
 </body>
 
 </html>
