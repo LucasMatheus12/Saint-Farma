@@ -157,7 +157,7 @@ function PesquisarCliente() {
   let cpf = document.getElementById('CPFCliente')
 
   let cliente = new Cliente(nome.value, telefone.value, cpf.value)
-
+  console.log(cliente)
   let ClienteFiltrado = bd.pesquisar(cliente)
   carregaListaCliente(ClienteFiltrado, true)
 }
