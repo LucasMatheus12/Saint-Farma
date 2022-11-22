@@ -278,7 +278,7 @@ ul#menu-interno li .active {
 
 .input-radio {
     position: relative;
-    top: 10px;
+    top: 50px;
     font-size: 18px;
 }
 
@@ -288,6 +288,7 @@ ul#menu-interno li .active {
     border: 2px solid white;
     border-radius: 20px 20px;
     padding: 5px;
+    margin-bottom: 25px;
 }
 
 /* ajustando botões do pagamento */
@@ -422,4 +423,11 @@ details input {
     font-family: 'Inter', sans-serif;
     font-size: 1em;
     color: #0C2D48;
+}
+
+/* ajustando problema do relatorio */
+
+.ajustar-relatorio {
+   position: absolute;
+   padding-bottom: 50px;
 }

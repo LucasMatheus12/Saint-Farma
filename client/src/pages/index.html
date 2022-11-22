@@ -29,7 +29,7 @@
         </a>
 
         <div id="log-administrador">
-          <a id="link-administrador" href="./administrador_login/administrador-login.html"><i
+          <a id="link-administrador" href="./administrador-login.html"><i
               class="fa-solid fa-user icone-administrador"></i> Administrador</a>
         </div>
       </div>
@@ -87,15 +87,6 @@
     </section>
   </div>
   <script src="menuLateral.js"></script>
-  <script>
-    const home = async () =>{
-    const url = new URL("http://localhost:3000/home")
-    let result = await fetch(url)
-    result = await result.json()
-    console.log(result)
-}
-  home(); 
-  </script>
 </body>
 
 </html>

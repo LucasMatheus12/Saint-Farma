@@ -64,7 +64,7 @@
         <div class="row">
           <div class="col-2">
             <ul id="menu-interno">
-              <li><a class="active" href="relatorio.html">Emitir Relatório</a></li>
+              <li class="ajustar-relatorio"><a class="active" href="relatorio.html">Emitir Relatório</a></li>
             </ul>
           </div>
         </div>
@@ -73,24 +73,20 @@
 
       <div class="container">
         <div class="row">
-          <div class="col-2 input-radio">
-            <input type="radio" name="relatorio" id="Relatorio-Diario" value="1">
+          <div class="col-3 input-radio">
+            <input type="radio" name="relatorio" class="Relatorio" value="1">
             <label for="Relatorio-Diario">Relatório Diário</label>
           </div>
-          <div class="col-2 input-radio">
-            <input type="radio" name="relatorio" id="Relatorio-Semanal" value="2">
-            <label for="Relatorio-Semanal">Relatório Semanal</label>
-          </div>
-          <div class="col-2 input-radio">
-            <input type="radio" name="relatorio" id="Relatorio-Mensal" value="3">
+          <div class="col-3 input-radio">
+            <input type="radio" name="relatorio" class="Relatorio" value="2">
             <label for="Relatorio-Mensal">Relatório Mensal</label>
           </div>
-          <div class="col-2 input-radio">
-            <input type="radio" name="relatorio" id="Relatorio-Anual" value="4">
+          <div class="col-3 input-radio">
+            <input type="radio" name="relatorio" class="Relatorio" value="3">
             <label for="Relatorio-Anual">Relatório Anual</label>
           </div>
-          <div class="col-4 input-radio">
-            <button type="submit" class="botao-input-radio"><i class="fa-regular fa-circle-check"></i> Gerar
+          <div class="col-3 input-radio">
+            <button type="submit" class="botao-input-radio" onclick="PegarRelatorio()"><i class="fa-regular fa-circle-check"></i> Gerar
               Relatório</button>
           </div>
 
@@ -99,7 +95,6 @@
               <thead>
                 <tr class="tr">
                   <th class="th col-2">Cod. Produto</th>
-                  <th class="th col-2">Produto</th>
                   <th class="th col-2">Quantidade</th>
                   <th class="th col-2">Data da Compra</th>
                   <th class="th col-2">Forma de Pagamento</th>
@@ -109,17 +104,8 @@
                 </tr>
               </thead>
 
-              <tbody id="lista-contatos">
-                <tr>
-                  <td>1</td>
-                  <td>Equipamento</td>
-                  <td>5</td>
-                  <td>03/11/2022</td>
-                  <td>pix</td>
-                  <td>900 R$</td>
-                  <td>10%</td>
-                  <td>Junior</td>
-                </tr>
+              <tbody id="listaRelatorio">
+            
               </tbody>
 
             </table>
@@ -132,7 +118,7 @@
   </section>
   </div>
   <script src="menuLateral.js"></script>
-  <script src="back.js"></script>
+  <script src="../pages/back-relatorio.js"></script>
 </body>
 
 </html>

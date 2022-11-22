@@ -11,7 +11,7 @@
 
 <body class="corpo_administrador_login">
     <header>
-        <a href="administrador-enviar-codigo.html"><img src="public/voltar.svg" alt="icone de voltar a página"
+        <a href="administrador-login.html"><img src="/client/public/voltar.svg" alt="icone de voltar a página"
                 class="voltar_login_admoinistrador"></a>
     </header>
 
@@ -21,20 +21,19 @@
             <div class="container_login">
                 <div class="container_login_nomes">
                     <p class="logo_form">SaintFarma</p>
+                    <p>Informe o e-mail para receber o código <br>
+                        de recuperação de senha.</p>
                 </div>
 
                 <form action="" class="form_administrador">
                     <div class="form_administrador_login">
-                        <label for="email">Digite uma nova senha:</label>
-                        <input id="email" type="password" name="senha" required placeholder="*********">
+                        <label for="email">Endereço de e-mail:</label>
+                        <input id="email" type="email" name="email" required placeholder="user@example.com">
 
-                        <label for="senha">Confirme sua senha:</label>
-                        <input id="password" type="password" name="password" required placeholder="*********">
-
-                        <a href="administrador-login.html"><button type="button" id="botao_entrar">Salvar</button></a>
+                        <a href="administrador-enviar-codigo.html"><button type="button"
+                                id="botao_entrar">Próximo</button></a>
 
                     </div>
-
 
                 </form>
             </div>
@@ -42,7 +41,6 @@
         </section>
 
     </main>
-
 </body>
 
 </html>
