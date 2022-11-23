@@ -84,7 +84,7 @@
       </div>
 
 
-      <form class="container" onsubmit="validarCPF();">
+      <form class="container">
         <div class="row">
           <div class="col-12 controle-formulario">
             <label for="Nome-cliente">Nome</label>
@@ -95,7 +95,7 @@
           <div class="col-4 controle-formulario">
             <label for="Telefone-cliente">Telefone</label>
             <input type="text" class="maior" name="telefone-cliente" id="Telefonecliente"
-              placeholder="Digite o telefone do cliente..">
+              placeholder="Digite o telefone do cliente.." required autocomplete="off" maxlength="11" minlength="11" >
           </div>
 
           <div class="col-8 controle-formulario">
