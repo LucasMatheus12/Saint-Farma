@@ -104,7 +104,40 @@ class BD {
        }
        return VendaAPrazoFiltrada
       }
+      recuperarTodosRegistrosEstoque() {
+        // ARRAY DE estoques
+       let estoques = Array()
+       let id = localStorage.getItem('id')
+       
+       //recuperar todo o estoque cadastrado em LocalStorage
+       for(let i=1;i <= id;i++) {
+         //recuperar estoque
+         let estoque = JSON.parse(localStorage.getItem(i))
+         // existe a possibilidade de haver indices que foram pulados ou removidos
+         // nesses casos nós vamos pular esses indices
+         if(estoque === null) {
+           continue
+         }
+         estoque.id = i
+         estoques.push(estoque)
+       }
+       return estoques
+    }
 
+     diminuirEstoque(codigo,quantidade) {
+      let estoque = Array()
+      estoque = this.recuperarTodosRegistrosEstoque()
+      estoque.forEach(function(e) {
+          if(e.codigo == codigo) {
+            let id = localStorage.getItem('id')
+            e.quantidade -= quantidade
+            localStorage.setItem(id,JSON.stringify(e))
+          }
+      })
+     }
+     remover(id) {
+      localStorage.removeItem(id)
+    }
 }
 
 let bd = new BD();
@@ -123,6 +156,7 @@ function CadastrarVendaAPrazo() {
     let vendaaprazo = new VendaAPrazo(quantidade.value,codigo.value,valorapagar.value,datacompra.value,dataapagar.value,parcelas.value,tipopagamento.value,cpfcliente.value,nomefuncionario.value)
 
     bd.GravarVendaAPrazo(vendaaprazo)
+    DiminuirQuantidadeDoEstoque(codigo.value,quantidade.value)
     window.location.reload()
 }
 
@@ -173,11 +207,12 @@ function carregaListaVendaAPrazo(vendaaprazo = Array(),filtro = false,editar = f
           let btn = document.createElement('button')
           btn.className = 'btn btn-danger'
           btn.innerHTML = '<i class="fas fa-times"></i>'
-          btn.id = `id_deletar_${d.id}`
+          btn.id = `id_deletar_${d.id}vendaAPrazo`
           btn.onclick = function() {
-            ModificaEstilo3()
-             $('#modalConsulta').modal('show')
+            //ModificaEstilo3()
+             //$('#modalConsulta').modal('show')
             let id = this.id.replace('id_deletar_','')
+            bd.remover(id)
           }
           linha.insertCell(7).append(btn) 
          }
@@ -269,3 +304,7 @@ function CadastrarEditado() {
     bd.retornarvalorcadastradoEditar(vendaaprazo)
     location.href = 'venda-a-prazo-editar.html'
   }
+
+  function DiminuirQuantidadeDoEstoque(codigo,quantidade) {
+    bd.diminuirEstoque(codigo,quantidade)
+ }
