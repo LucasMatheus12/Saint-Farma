@@ -103,7 +103,9 @@ class BD {
           }
        return EstoqueFiltrado
       }
-
+       remover(id) {
+         localStorage.removeItem(id)
+       }
 }
 
 let bd = new BD();
@@ -162,9 +164,10 @@ function carregaListaEstoque(estoque = Array(),filtro = false,editar = false, ex
           btn.innerHTML = '<i class="fas fa-times"></i>'
           btn.id = `id_deletar_${d.id}`
           btn.onclick = function() {
-            ModificaEstilo3()
-             $('#modalConsulta').modal('show')
+           // ModificaEstilo3()
+           //  $('#modalConsulta').modal('show')
             let id = this.id.replace('id_deletar_','')
+            bd.remover(id)
           }
           linha.insertCell(6).append(btn) 
          }

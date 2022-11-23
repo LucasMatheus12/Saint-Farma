@@ -83,7 +83,9 @@ class BD {
     }
     return ClienteFiltrado
   }
-
+  remover(id) {
+    localStorage.removeItem(id)
+  }
 }
 
 let bd = new BD();
@@ -140,11 +142,12 @@ function carregaListaCliente(cliente = Array(), filtro = false, editar = false, 
       let btn = document.createElement('button')
       btn.className = 'btn btn-danger'
       btn.innerHTML = '<i class="fas fa-times"></i>'
-      btn.id = `id_deletar_${d.id}`
+      btn.id = `id_deletar_${d.id}cliente`
       btn.onclick = function () {
-        ModificaEstilo3()
-        $('#modalConsulta').modal('show')
+        //ModificaEstilo3()
+        //$('#modalConsulta').modal('show')
         let id = this.id.replace('id_deletar_', '')
+        bd.remover(id)
       }
       linha.insertCell(7).append(btn)
     }
