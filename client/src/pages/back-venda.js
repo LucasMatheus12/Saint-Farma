@@ -92,7 +92,40 @@ class BD {
        console.log(VendaFiltrada)
        return VendaFiltrada
       }
+      recuperarTodosRegistrosEstoque() {
+        // ARRAY DE estoques
+       let estoques = Array()
+       let id = localStorage.getItem('id')
+       
+       //recuperar todo o estoque cadastrado em LocalStorage
+       for(let i=1;i <= id;i++) {
+         //recuperar estoque
+         let estoque = JSON.parse(localStorage.getItem(i))
+         // existe a possibilidade de haver indices que foram pulados ou removidos
+         // nesses casos nós vamos pular esses indices
+         if(estoque === null) {
+           continue
+         }
+         estoque.id = i
+         estoques.push(estoque)
+       }
+       return estoques
+    }
 
+     diminuirEstoque(codigo,quantidade) {
+      let estoque = Array()
+      estoque = this.recuperarTodosRegistrosEstoque()
+      estoque.forEach(function(e) {
+          if(e.codigo == codigo) {
+            let id = localStorage.getItem('id')
+            e.quantidade -= quantidade
+            localStorage.setItem(id,JSON.stringify(e))
+          }
+      })
+     }
+     remover(id) {
+      localStorage.removeItem(id)
+     }
 }
 
 let bd = new BD();
@@ -110,6 +143,7 @@ function CadastrarVenda() {
     let venda = new Venda(quantidade.value,codigo.value,valorapagar.value-valorDesconto,datacompra.value,formapagamento.value,desconto.value,cpfcliente.value,nomefuncionario.value)
 
     bd.GravarVenda(venda)
+    DiminuirQuantidadeDoEstoque(codigo.value,quantidade.value)
     window.location.reload()
 }
 
@@ -158,11 +192,12 @@ function carregaListaVenda(venda = Array(),filtro = false,editar = false, exclui
           let btn = document.createElement('button')
           btn.className = 'btn btn-danger'
           btn.innerHTML = '<i class="fas fa-times"></i>'
-          btn.id = `id_deletar_${d.id}`
+          btn.id = `id_deletar_${d.id}venda`
           btn.onclick = function() {
-            ModificaEstilo3()
-             $('#modalConsulta').modal('show')
+            //ModificaEstilo3()
+            // $('#modalConsulta').modal('show')
             let id = this.id.replace('id_deletar_','')
+            bd.remover(id)
           }
           linha.insertCell(6).append(btn) 
          }
@@ -236,4 +271,8 @@ function CadastrarEditado() {
     let venda = new Venda(quantidadevenda.value,codigoproduto.value,valorvenda.value,datavenda.value,tipopagamento.value,descontovenda.value,cpfvenda.value,funcionariovenda.value)
     bd.retornarvalorcadastradoEditar(venda)
     location.href = 'venda-editar.html'
+  }
+
+  function DiminuirQuantidadeDoEstoque(codigo,quantidade) {
+     bd.diminuirEstoque(codigo,quantidade)
   }
