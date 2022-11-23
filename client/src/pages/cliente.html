@@ -84,7 +84,7 @@
       </div>
 
 
-      <div class="container">
+      <form class="container" onsubmit="validarCPF();">
         <div class="row">
           <div class="col-12 controle-formulario">
             <label for="Nome-cliente">Nome</label>
@@ -101,7 +101,7 @@
           <div class="col-8 controle-formulario">
             <label for="CPF-cliente">CPF</label>
             <input type="text" class="maior" name="cpf-cliente" id="CPFcliente"
-              placeholder="Digite o CPF do cliente..">
+              placeholder="Digite o CPF do cliente.." autocomplete="off" required maxlength="14" minlength="14" onkeypress="formatar('###.###.###-##', this)">
           </div>
 
           <div class="col-12 titulo-cadastro">
@@ -140,7 +140,7 @@
           </div>
 
         </div>
-      </div>
+      </form>
 
 
   </div>

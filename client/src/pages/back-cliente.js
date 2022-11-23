@@ -215,3 +215,27 @@ function CadastrarEditado() {
   bd.retornarvalorcadastradoEditar(cliente)
   location.href = 'cliente-editar.html'
 } 
+
+
+function formatar(mascara, documento){
+  let i = documento.value.length; 
+  let saida = mascara.substring(0, 1); 
+  let texto = mascara.substring(i); 
+
+  if(texto.substring(0, 1) != saida){
+    documento.value += texto.substring(0, 1);
+  }
+}
+
+
+function validarCPF(){
+  let value = document.getElementById("CPFcliente").value
+  let re = /([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})/g;
+  
+  if(! re.test(value)){
+    alert('CPF Invalido!'); 
+    document.forms.CPFcliente.focus(); 
+    return false; 
+  }
+  return true
+}
