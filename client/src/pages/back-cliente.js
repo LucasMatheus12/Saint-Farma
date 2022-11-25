@@ -137,7 +137,6 @@ function CadastrarCliente() {
     modificaEstiloError()
     $('#modalCliente').modal('show')
   }
-
 }
 
 function carregaListaCliente(cliente = Array(), filtro = false, editar = false, excluir = false) {
@@ -251,4 +250,5 @@ function CadastrarEditado() {
   bd.retornarvalorcadastradoEditar(cliente)
   location.href = 'cliente-editar.html'
 } 
+
 
