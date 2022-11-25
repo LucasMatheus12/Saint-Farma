@@ -19,7 +19,7 @@ Projeto exclusivo realizado com parceria da Farmácia Santa Clara, para resolver
 <br>
 
 <p align="center">
-  <img alt="SaintFarm" src=".github/Tela-Inicial-menu-interação.png" width="100%">
+  <img alt="SaintFarm" src=".github/image-SaintFarma.jpeg" width="100%">
 </p>
 
 ## 🚀 Tecnologias
