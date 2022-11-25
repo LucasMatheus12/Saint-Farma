@@ -10,8 +10,8 @@ class Cliente {
     this.numerocasa = numerocasa;
   }
   validarDadosBanco() {
-    for(let i in this) {
-      if(this[i] == undefined || this[i] == '' || this[i] == null || this[i] < 0) {
+    for (let i in this) {
+      if (this[i] == undefined || this[i] == '' || this[i] == null || this[i] < 0) {
         return false
       }
     }
@@ -98,23 +98,23 @@ class BD {
 
 let bd = new BD();
 
- /* Modais */
+/* Modais */
 
- function modificaEstiloSuccesso() {
+function modificaEstiloSuccesso() {
   document.getElementById('TituloModal').innerHTML = 'Sucesso'
   document.getElementById('TituloModal').className = 'text-success'
   document.getElementById('descricaoModal').innerHTML = 'O cliente foi cadastrado com sucesso !'
- document.getElementById('botao-modal').innerHTML = 'Confirmar'
- document.getElementById('botao-modal').className = 'btn btn-success'
- }
+  document.getElementById('botao-modal').innerHTML = 'Confirmar'
+  document.getElementById('botao-modal').className = 'btn btn-success'
+}
 
- function modificaEstiloError() {
-   document.getElementById('TituloModal').innerHTML = 'Erro no Cadastro'
-   document.getElementById('TituloModal').className = 'text-danger'
-   document.getElementById('descricaoModal').innerHTML = 'Algum dado não foi preenchido.'
+function modificaEstiloError() {
+  document.getElementById('TituloModal').innerHTML = 'Erro no Cadastro'
+  document.getElementById('TituloModal').className = 'text-danger'
+  document.getElementById('descricaoModal').innerHTML = 'Algum dado não foi preenchido.'
   document.getElementById('botao-modal').innerHTML = 'Voltar e Corrigir'
   document.getElementById('botao-modal').className = 'btn btn-danger'
-  }
+}
 
 function CadastrarCliente() {
   let nome = document.getElementById('Nomecliente')
@@ -127,12 +127,12 @@ function CadastrarCliente() {
   let numerocasa = document.getElementById('Numerocliente')
 
   let cliente = new Cliente(nome.value, telefone.value, cpf.value, cidade.value, referencia.value, rua.value, bairro.value, numerocasa.value)
-  if(cliente.validarDadosBanco()){
+  if (cliente.validarDadosBanco()) {
     console.log('chegou')
     bd.GravarCliente(cliente)
     modificaEstiloSuccesso()
     $('#modalCliente').modal('show')
-    
+
   } else {
     modificaEstiloError()
     $('#modalCliente').modal('show')
@@ -249,6 +249,6 @@ function CadastrarEditado() {
   let cliente = new Cliente(nome.value, telefone.value, cpf.value, cidade.value, referencia.value, rua.value, bairro.value, numerocasa.value)
   bd.retornarvalorcadastradoEditar(cliente)
   location.href = 'cliente-editar.html'
-} 
+}
 
 
