@@ -19,7 +19,7 @@ Projeto exclusivo realizado com parceria da Farmácia Santa Clara, para resolver
 <br>
 
 <p align="center">
-  <img alt="rocketpay" src=".github/project.png" width="100%">
+  <img alt="SaintFarm" src=".github/Tela-Inicial-menu-interação.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
@@ -28,6 +28,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - HTML e CSS
 - JavaScript e JSON
+- LocalStorage e Bootstrap
+- Smtpjs 
 
 ## 💻 Projeto
 
