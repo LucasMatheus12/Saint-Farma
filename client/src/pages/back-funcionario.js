@@ -10,6 +10,14 @@ class Funcionario {
         this.bairro = bairro;
         this.numeroCasa = numeroCasa;
     }
+    validarDadosBanco() {
+        for(let i in this) {
+          if(this[i] == undefined || this[i] == '' || this[i] == null || this[i] < 0) {
+            return false
+          }
+        }
+        return true
+      }
 }
 
 
@@ -94,6 +102,24 @@ class BancoDados {
 
 let BD = new BancoDados();
 
+ /* Modais */
+
+ function modificaEstiloSuccesso() {
+    document.getElementById('TituloModal').innerHTML = 'Sucesso'
+    document.getElementById('TituloModal').className = 'text-success'
+    document.getElementById('descricaoModal').innerHTML = 'O funcionário foi cadastrado com sucesso !'
+   document.getElementById('botao-modal').innerHTML = 'Confirmar'
+   document.getElementById('botao-modal').className = 'btn btn-success'
+   }
+  
+   function modificaEstiloError() {
+     document.getElementById('TituloModal').innerHTML = 'Erro no Cadastro'
+     document.getElementById('TituloModal').className = 'text-danger'
+     document.getElementById('descricaoModal').innerHTML = 'Algum dado não foi preenchido.'
+    document.getElementById('botao-modal').innerHTML = 'Voltar e Corrigir'
+    document.getElementById('botao-modal').className = 'btn btn-danger'
+    }
+
 function CadastrarFuncionario() {
     let nome = document.getElementById('Nomefuncionario')
     let salario = document.getElementById('Salariofuncionario')
@@ -106,8 +132,14 @@ function CadastrarFuncionario() {
     let numeroCasa = document.getElementById('Numerofuncionario')
 
     let funcionario = new Funcionario(nome.value, salario.value, telefone.value, cpf.value, cidade.value, referencia.value, rua.value, bairro.value, numeroCasa.value);
-
-    BD.GravarFuncionario(funcionario);
+    if(funcionario.validarDadosBanco()){
+        BD.GravarFuncionario(funcionario);
+        modificaEstiloSuccesso()
+        $('#modalFuncionario').modal('show')
+    } else {
+       modificaEstiloError()
+       $('#modalFuncionario').modal('show')
+    }
 }
 
 function visualizarListaFuncionario(funcionario = Array(), filtro = false, editar = false, excluir = false) {
@@ -152,6 +184,7 @@ function visualizarListaFuncionario(funcionario = Array(), filtro = false, edita
             //$('#modalConsulta').modal('show')
             let id = this.id.replace('id_deletar_', '')
             BD.remover(id)
+            window.location.reload()
           }
           linha.insertCell(7).append(btn)
         }

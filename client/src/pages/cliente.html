@@ -84,24 +84,21 @@
       </div>
 
 
-      <form class="container" onsubmit="validarCPF();">
+      <form class="container">
         <div class="row">
           <div class="col-12 controle-formulario">
             <label for="Nome-cliente">Nome</label>
-            <input type="text" class="maior" name="nome-cliente" id="Nomecliente"
-              placeholder="Digite o nome do cliente..">
+            <input type="text" class="maior" name="nome-cliente" id="Nomecliente" placeholder="Digite o nome do cliente..">
           </div>
 
           <div class="col-4 controle-formulario">
             <label for="Telefone-cliente">Telefone</label>
-            <input type="text" class="maior" name="telefone-cliente" id="Telefonecliente"
-              placeholder="Digite o telefone do cliente..">
+            <input type="text" class="maior" name="telefone-cliente" id="Telefonecliente" placeholder="Digite o telefone do cliente..">
           </div>
 
           <div class="col-8 controle-formulario">
             <label for="CPF-cliente">CPF</label>
-            <input type="text" class="maior" name="cpf-cliente" id="CPFcliente"
-              placeholder="Digite o CPF do cliente.." autocomplete="off" required maxlength="14" minlength="14" onkeypress="formatar('###.###.###-##', this)">
+            <input type="text" class="maior" name="cpf-cliente" id="CPFcliente" placeholder="Digite o CPF do cliente..">
           </div>
 
           <div class="col-12 titulo-cadastro">
@@ -116,8 +113,7 @@
 
           <div class="col-9 controle-formulario">
             <label for="Referencia-cliente">Referência</label>
-            <input type="text" class="maior" name="referencia-cliente" id="Referenciacliente"
-              placeholder="Digite algum ponto de referência">
+            <input type="text" class="maior" name="referencia-cliente" id="Referenciacliente" placeholder="Digite algum ponto de referência">
           </div>
 
           <div class="col-4 controle-formulario">
@@ -136,7 +132,7 @@
           </div>
 
           <div class="col-2">
-            <button type="submit" class="botao-formulario" onclick="CadastrarCliente()"><i class="fa-regular fa-circle-check"></i> Cadastrar</button>
+            <button type="button" class="botao-formulario" onclick="CadastrarCliente()"><i class="fa-regular fa-circle-check"></i> Cadastrar</button>
           </div>
 
         </div>
@@ -146,8 +142,25 @@
   </div>
   </section>
   </div>
+  <!-- Modal -->
+  <div class="modal" id="modalCliente" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="TituloModal"></h5>
+        </div>
+        <div class="modal-body" id="descricaoModal"></div>
+        <div class="modal-footer">
+        <button type="button" id="botao-modal" onclick="window.location.reload()" data-dismiss="modal"></button>
+        </div>
+    </div>
+    </div>
+</div>
   <script src="menuLateral.js"></script>
   <script src="back-cliente.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
 </body>
 
 </html>

@@ -431,3 +431,9 @@ details input {
    position: absolute;
    padding-bottom: 50px;
 }
+
+/* tirando barra horizontal do login */
+
+.corpo_administrador_login {
+    overflow-x: hidden;
+}
