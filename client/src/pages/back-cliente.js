@@ -9,6 +9,14 @@ class Cliente {
     this.bairro = bairro;
     this.numerocasa = numerocasa;
   }
+  validarDadosBanco() {
+    for(let i in this) {
+      if(this[i] == undefined || this[i] == '' || this[i] == null || this[i] < 0) {
+        return false
+      }
+    }
+    return true
+  }
 }
 
 class BD {
@@ -90,6 +98,24 @@ class BD {
 
 let bd = new BD();
 
+ /* Modais */
+
+ function modificaEstiloSuccesso() {
+  document.getElementById('TituloModal').innerHTML = 'Sucesso'
+  document.getElementById('TituloModal').className = 'text-success'
+  document.getElementById('descricaoModal').innerHTML = 'O cliente foi cadastrado com sucesso !'
+ document.getElementById('botao-modal').innerHTML = 'Confirmar'
+ document.getElementById('botao-modal').className = 'btn btn-success'
+ }
+
+ function modificaEstiloError() {
+   document.getElementById('TituloModal').innerHTML = 'Erro no Cadastro'
+   document.getElementById('TituloModal').className = 'text-danger'
+   document.getElementById('descricaoModal').innerHTML = 'Algum dado não foi preenchido.'
+  document.getElementById('botao-modal').innerHTML = 'Voltar e Corrigir'
+  document.getElementById('botao-modal').className = 'btn btn-danger'
+  }
+
 function CadastrarCliente() {
   let nome = document.getElementById('Nomecliente')
   let telefone = document.getElementById('Telefonecliente')
@@ -101,9 +127,15 @@ function CadastrarCliente() {
   let numerocasa = document.getElementById('Numerocliente')
 
   let cliente = new Cliente(nome.value, telefone.value, cpf.value, cidade.value, referencia.value, rua.value, bairro.value, numerocasa.value)
-
-  if(validarTel() == true){
+  if(cliente.validarDadosBanco()){
+    console.log('chegou')
     bd.GravarCliente(cliente)
+    modificaEstiloSuccesso()
+    $('#modalCliente').modal('show')
+    
+  } else {
+    modificaEstiloError()
+    $('#modalCliente').modal('show')
   }
 }
 
@@ -150,6 +182,7 @@ function carregaListaCliente(cliente = Array(), filtro = false, editar = false, 
         //$('#modalConsulta').modal('show')
         let id = this.id.replace('id_deletar_', '')
         bd.remover(id)
+        window.location.reload()
       }
       linha.insertCell(7).append(btn)
     }
@@ -219,47 +252,3 @@ function CadastrarEditado() {
 } 
 
 
-function formatar(mascara, documento){
-  let i = documento.value.length; 
-  let saida = mascara.substring(0, 1); 
-  let texto = mascara.substring(i); 
-
-  if(texto.substring(0, 1) != saida){
-    documento.value += texto.substring(0, 1);
-  }
-}
-
-function formatarTel(mascara, documento){
-  let i = documento.value.length; 
-  let saida = mascara.substring(0, 1); 
-  let texto = mascara.substring(i); 
-
-  if(texto.substring(0, 1) != saida){
-    documento.value += texto.substring(0, 1);
-  }
-}
-
-function validarCPF(){
-  let value = document.getElementById("CPFcliente").value
-  let re = /([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})/g;
-  
-  if(! re.test(value)){
-    alert('CPF Invalido!'); 
-    document.forms.CPFcliente; 
-    return false; 
-  }else{
-    return true
-  }
-  
-}
-
-function validarTel(){
-  let value = document.getElementById("Telefonecliente").value
-  let re = /^[0-9]{2}-[0-9]{5}-[0-9]{4}/g; 
-  if(! re.test(value)){
-    alert('Telefone Invalido'); 
-    document.forms.Telefonecliente; 
-    return false; 
-  }
-  return true; 
-}

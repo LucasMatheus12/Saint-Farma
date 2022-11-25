@@ -2,7 +2,7 @@
 <h1 align="center"> Saint-Farma </h1>
 
 <p align="center">
-Projeto exclusivo realizado com parceria da Farmácia Santa Clara, para resolver seus problemas através de uma aplicação WEB.
+Projeto exclusivo realizado com parceria da Farmácia Santa Clara, para resolver seus problemas através de uma aplicação WEB Completa.
 </p>
 
 <p align="center">
