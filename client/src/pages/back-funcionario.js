@@ -11,13 +11,13 @@ class Funcionario {
         this.numeroCasa = numeroCasa;
     }
     validarDadosBanco() {
-        for(let i in this) {
-          if(this[i] == undefined || this[i] == '' || this[i] == null || this[i] < 0) {
-            return false
-          }
+        for (let i in this) {
+            if (this[i] == undefined || this[i] == '' || this[i] == null || this[i] < 0) {
+                return false
+            }
         }
         return true
-      }
+    }
 }
 
 
@@ -58,7 +58,7 @@ class BancoDados {
     }
 
     listarRegistrofuncionario() {
-        
+
         let funcionarios = Array();
         let id = localStorage.getItem('idFuncionario');
         let idreplace = id.replace('funcionario', '');
@@ -97,28 +97,28 @@ class BancoDados {
     }
     remover(id) {
         localStorage.removeItem(id)
-      }
+    }
 }
 
 let BD = new BancoDados();
 
- /* Modais */
+/* Modais */
 
- function modificaEstiloSuccesso() {
+function modificaEstiloSuccesso() {
     document.getElementById('TituloModal').innerHTML = 'Sucesso'
     document.getElementById('TituloModal').className = 'text-success'
     document.getElementById('descricaoModal').innerHTML = 'O funcionário foi cadastrado com sucesso !'
-   document.getElementById('botao-modal').innerHTML = 'Confirmar'
-   document.getElementById('botao-modal').className = 'btn btn-success'
-   }
-  
-   function modificaEstiloError() {
-     document.getElementById('TituloModal').innerHTML = 'Erro no Cadastro'
-     document.getElementById('TituloModal').className = 'text-danger'
-     document.getElementById('descricaoModal').innerHTML = 'Algum dado não foi preenchido.'
+    document.getElementById('botao-modal').innerHTML = 'Confirmar'
+    document.getElementById('botao-modal').className = 'btn btn-success'
+}
+
+function modificaEstiloError() {
+    document.getElementById('TituloModal').innerHTML = 'Erro no Cadastro'
+    document.getElementById('TituloModal').className = 'text-danger'
+    document.getElementById('descricaoModal').innerHTML = 'Algum dado não foi preenchido.'
     document.getElementById('botao-modal').innerHTML = 'Voltar e Corrigir'
     document.getElementById('botao-modal').className = 'btn btn-danger'
-    }
+}
 
 function CadastrarFuncionario() {
     let nome = document.getElementById('Nomefuncionario')
@@ -132,13 +132,13 @@ function CadastrarFuncionario() {
     let numeroCasa = document.getElementById('Numerofuncionario')
 
     let funcionario = new Funcionario(nome.value, salario.value, telefone.value, cpf.value, cidade.value, referencia.value, rua.value, bairro.value, numeroCasa.value);
-    if(funcionario.validarDadosBanco()){
+    if (funcionario.validarDadosBanco()) {
         BD.GravarFuncionario(funcionario);
         modificaEstiloSuccesso()
         $('#modalFuncionario').modal('show')
     } else {
-       modificaEstiloError()
-       $('#modalFuncionario').modal('show')
+        modificaEstiloError()
+        $('#modalFuncionario').modal('show')
     }
 }
 
@@ -163,32 +163,32 @@ function visualizarListaFuncionario(funcionario = Array(), filtro = false, edita
         linha.insertCell(5).innerHTML = d.bairro
         linha.insertCell(6).innerHTML = d.salario
         if (editar == true) {
-          let btn = document.createElement('button')
-          btn.className = 'btn btn-primary'
-          btn.innerHTML = '<i class="fa-solid fa-pen"></i>'
-          btn.id = `id_editar_${d.id}`
-          btn.onclick = function () {
-            let id = this.id.replace('id_editar_', '')
-            let funcionario = JSON.parse(localStorage.getItem(id + 'funcionario'))
-            BD.GravarFuncionarioEditar(id, funcionario)
-            location.href = 'funcionarios-editar-interno.html'
-          }
-          linha.insertCell(7).append(btn)
+            let btn = document.createElement('button')
+            btn.className = 'btn btn-primary'
+            btn.innerHTML = '<i class="fa-solid fa-pen"></i>'
+            btn.id = `id_editar_${d.id}`
+            btn.onclick = function () {
+                let id = this.id.replace('id_editar_', '')
+                let funcionario = JSON.parse(localStorage.getItem(id + 'funcionario'))
+                BD.GravarFuncionarioEditar(id, funcionario)
+                location.href = 'funcionarios-editar-interno.html'
+            }
+            linha.insertCell(7).append(btn)
         } else if (excluir == true) {
-          let btn = document.createElement('button')
-          btn.className = 'btn btn-danger'
-          btn.innerHTML = '<i class="fas fa-times"></i>'
-          btn.id = `id_deletar_${d.id}funcionario`
-          btn.onclick = function () {
-            //ModificaEstilo3()
-            //$('#modalConsulta').modal('show')
-            let id = this.id.replace('id_deletar_', '')
-            BD.remover(id)
-            window.location.reload()
-          }
-          linha.insertCell(7).append(btn)
+            let btn = document.createElement('button')
+            btn.className = 'btn btn-danger'
+            btn.innerHTML = '<i class="fas fa-times"></i>'
+            btn.id = `id_deletar_${d.id}funcionario`
+            btn.onclick = function () {
+                //ModificaEstilo3()
+                //$('#modalConsulta').modal('show')
+                let id = this.id.replace('id_deletar_', '')
+                BD.remover(id)
+                window.location.reload()
+            }
+            linha.insertCell(7).append(btn)
         }
-      })
+    })
 }
 
 function Pesquisarfuncionario() {
@@ -201,7 +201,7 @@ function Pesquisarfuncionario() {
 
     let FuncionarioPesquisado = BD.Buscarfuncionario(funcionario);
     visualizarListaFuncionario(FuncionarioPesquisado, true);
-    
+
 }
 
 function PesquisarfuncionarioExcluir() {
@@ -234,20 +234,20 @@ function preencherEditar() {
     let funcionario = Array()
     funcionario = BD.RecuperarFuncionarioEditar()
     funcionario.forEach(function (e) {
-      document.getElementById('NomefuncionarioEditar').value = e.nome
-      document.getElementById('SalariofuncionarioEditar').value = e.salario
-      document.getElementById('TelefonefuncionarioEditar').value = e.telefone
-      document.getElementById('CPFfuncionarioEditar').value = e.cpf
-      document.getElementById('CidadefuncionarioEditar').value = e.cidade
-      document.getElementById('ReferenciafuncionarioEditar').value = e.referencia
-      document.getElementById('RuafuncionarioEditar').value = e.rua
-      document.getElementById('BairrofuncionarioEditar').value = e.bairro
-      document.getElementById('NumeroCasafuncionarioEditar').value = e.numeroCasa
+        document.getElementById('NomefuncionarioEditar').value = e.nome
+        document.getElementById('SalariofuncionarioEditar').value = e.salario
+        document.getElementById('TelefonefuncionarioEditar').value = e.telefone
+        document.getElementById('CPFfuncionarioEditar').value = e.cpf
+        document.getElementById('CidadefuncionarioEditar').value = e.cidade
+        document.getElementById('ReferenciafuncionarioEditar').value = e.referencia
+        document.getElementById('RuafuncionarioEditar').value = e.rua
+        document.getElementById('BairrofuncionarioEditar').value = e.bairro
+        document.getElementById('NumeroCasafuncionarioEditar').value = e.numeroCasa
     })
-  
-  }
-  
-  function CadastrarEditado() {
+
+}
+
+function CadastrarEditado() {
     let nome = document.getElementById('NomefuncionarioEditar')
     let salario = document.getElementById('SalariofuncionarioEditar')
     let telefone = document.getElementById('TelefonefuncionarioEditar')
@@ -257,11 +257,11 @@ function preencherEditar() {
     let rua = document.getElementById('RuafuncionarioEditar')
     let bairro = document.getElementById('BairrofuncionarioEditar')
     let numerocasa = document.getElementById('NumeroCasafuncionarioEditar')
-  
-    let funcionario = new Funcionario(nome.value,salario.value,telefone.value,cpf.value,cidade.value,referencia.value,rua.value,bairro.value,numerocasa.value)
+
+    let funcionario = new Funcionario(nome.value, salario.value, telefone.value, cpf.value, cidade.value, referencia.value, rua.value, bairro.value, numerocasa.value)
     BD.RetornaRegistro(funcionario)
     location.href = 'funcionarios-editar.html'
-  } 
+}
 
 
 
