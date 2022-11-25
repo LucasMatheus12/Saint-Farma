@@ -102,7 +102,9 @@ function CadastrarCliente() {
 
   let cliente = new Cliente(nome.value, telefone.value, cpf.value, cidade.value, referencia.value, rua.value, bairro.value, numerocasa.value)
 
-  bd.GravarCliente(cliente)
+  if(validarTel() == true){
+    bd.GravarCliente(cliente)
+  }
 }
 
 function carregaListaCliente(cliente = Array(), filtro = false, editar = false, excluir = false) {
@@ -227,6 +229,15 @@ function formatar(mascara, documento){
   }
 }
 
+function formatarTel(mascara, documento){
+  let i = documento.value.length; 
+  let saida = mascara.substring(0, 1); 
+  let texto = mascara.substring(i); 
+
+  if(texto.substring(0, 1) != saida){
+    documento.value += texto.substring(0, 1);
+  }
+}
 
 function validarCPF(){
   let value = document.getElementById("CPFcliente").value
@@ -234,8 +245,21 @@ function validarCPF(){
   
   if(! re.test(value)){
     alert('CPF Invalido!'); 
-    document.forms.CPFcliente.focus(); 
+    document.forms.CPFcliente; 
+    return false; 
+  }else{
+    return true
+  }
+  
+}
+
+function validarTel(){
+  let value = document.getElementById("Telefonecliente").value
+  let re = /^[0-9]{2}-[0-9]{5}-[0-9]{4}/g; 
+  if(! re.test(value)){
+    alert('Telefone Invalido'); 
+    document.forms.Telefonecliente; 
     return false; 
   }
-  return true
+  return true; 
 }
