@@ -142,6 +142,7 @@ class BD {
 
 let bd = new BD();
 
+
 function CadastrarVendaAPrazo() {
     let quantidade = document.getElementById('Quantidadevendaaprazo')
     let codigo = document.getElementById('Codigoprodutovendaaprazo')
@@ -213,6 +214,7 @@ function carregaListaVendaAPrazo(vendaaprazo = Array(),filtro = false,editar = f
              //$('#modalConsulta').modal('show')
             let id = this.id.replace('id_deletar_','')
             bd.remover(id)
+            window.location.reload()
           }
           linha.insertCell(7).append(btn) 
          }

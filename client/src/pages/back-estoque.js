@@ -9,6 +9,14 @@ class Estoque {
     this.data = data;
     this.validade = validade;
   }
+  validarDadosBanco() {
+    for(let i in this) {
+      if(this[i] == undefined || this[i] == '' || this[i] == null || this[i] < 0) {
+        return false
+      }
+    }
+    return true
+  }
 }
 
 class BD {
@@ -110,6 +118,26 @@ class BD {
 
 let bd = new BD();
 
+ /* Modais */
+
+ function modificaEstiloSuccesso() {
+  document.getElementById('TituloModal').innerHTML = 'Sucesso'
+  document.getElementById('TituloModal').className = 'text-success'
+  document.getElementById('descricaoModal').innerHTML = 'O produto foi cadastrado com sucesso !'
+ document.getElementById('botao-modal').innerHTML = 'Confirmar'
+ document.getElementById('botao-modal').className = 'btn btn-success'
+ }
+
+ function modificaEstiloError() {
+   document.getElementById('TituloModal').innerHTML = 'Erro no Cadastro'
+   document.getElementById('TituloModal').className = 'text-danger'
+   document.getElementById('descricaoModal').innerHTML = 'Algum dado não foi preenchido.'
+  document.getElementById('botao-modal').innerHTML = 'Voltar e Corrigir'
+  document.getElementById('botao-modal').className = 'btn btn-danger'
+  }
+
+
+
 function CadastrarEstoque() {
     let codigo = document.getElementById('Codigoprod')
     let nome = document.getElementById('Nomeprod')
@@ -121,8 +149,14 @@ function CadastrarEstoque() {
     let validade = document.getElementById('Valprod')
 
     let estoque = new Estoque(codigo.value,nome.value,descricao.value,precocusto.value,precovenda.value,quantidade.value,data.value,validade.value)
-
-    bd.GravarEstoque(estoque)
+    if(estoque.validarDadosBanco()) {
+      bd.GravarEstoque(estoque)
+      modificaEstiloSuccesso()
+      $('#modalEstoque').modal('show')
+    }else {
+       modificaEstiloError()
+       $('#modalEstoque').modal('show')
+    }  
 }
 
 function carregaListaEstoque(estoque = Array(),filtro = false,editar = false, excluir = false) {
@@ -168,6 +202,7 @@ function carregaListaEstoque(estoque = Array(),filtro = false,editar = false, ex
            //  $('#modalConsulta').modal('show')
             let id = this.id.replace('id_deletar_','')
             bd.remover(id)
+            window.location.reload()
           }
           linha.insertCell(6).append(btn) 
          }
@@ -251,3 +286,4 @@ function CadastrarEditado() {
     bd.retornarvalorcadastradoEditar(estoque)
     location.href = 'estoque-editar.html'
   }
+

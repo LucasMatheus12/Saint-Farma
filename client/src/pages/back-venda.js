@@ -198,6 +198,7 @@ function carregaListaVenda(venda = Array(),filtro = false,editar = false, exclui
             // $('#modalConsulta').modal('show')
             let id = this.id.replace('id_deletar_','')
             bd.remover(id)
+            window.location.reload()
           }
           linha.insertCell(6).append(btn) 
          }
