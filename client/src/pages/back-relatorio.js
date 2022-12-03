@@ -84,6 +84,7 @@ function carregaListaRelatorio(relatorio = Array()) {
         linha.insertCell(3).innerHTML = d.formapagamento
         linha.insertCell(4).innerHTML = d.valorapagar
         linha.insertCell(5).innerHTML = d.desconto
+        linha.insertCell(6).innerHTML = d.nomefuncionario
     })
 }
 
